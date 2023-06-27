@@ -1,25 +1,21 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React, {useState} from 'react';
 import styles from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {SliderBox} from 'react-native-image-slider-box';
 
-const Home = () => {
-  const images = [
-    'https://source.unsplash.com/1024x768/?nature',
-    'https://source.unsplash.com/1024x768/?water',
-    'https://source.unsplash.com/1024x768/?girl',
-    'https://source.unsplash.com/1024x768/?tree',
-  ];
+
+const images = [
+  'https://source.unsplash.com/1024x768/?nature',
+  'https://source.unsplash.com/1024x768/?water',
+  'https://source.unsplash.com/1024x768/?girl',
+];
+
+const Home = ({navigation}) => {
+ 
 
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-
       {/* header bar */}
       <View
         style={{
@@ -28,21 +24,22 @@ const Home = () => {
           height: '12%',
           alignItems: 'center',
         }}>
-        <View
-          style={{
-            height: 34,
-            width: 34,
-            backgroundColor: 'gray',
-            borderRadius: 30,
-            left: 10,
-          }}>
-          <TouchableOpacity>
+         <TouchableOpacity onPress={()=> console.warn("hello")}>
+          <View
+            style={{
+              height: 34,
+              width: 34,
+              backgroundColor: 'gray',
+              borderRadius: 30,
+              left: 12,
+            }}>
             <Image
-              source={require('../../Assets/person.jpg')}
+              source={require('../../Assets/UserImage.png')}
               style={styles.ProfileImg}
             />
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity> 
+     
         <View style={{flex: 1, alignItems: 'center'}}>
           <Image
             source={require('../../Assets/Logo.png')}
@@ -70,7 +67,7 @@ const Home = () => {
           inactiveDotColor="white"
           autoplay
           circleLoop
-           resizeMode={'contain'}
+          resizeMode={'contain'}
           paginationBoxStyle={{
             paddingVertical: 10,
           }}
@@ -108,70 +105,69 @@ const Home = () => {
       </View>
 
       {/* cardList */}
-     
-     <View style={{flexDirection:'row',flex:0.5,bottom:5,right:3}}>
-      <TouchableOpacity>
-      <View style={styles.cardList}>
-        <View style={styles.productIcon}>
-          <Image
-            source={require('../../Assets/settings.png')}
-            style={{alignItems: 'center'}}
-          />
-        </View>
-        <View style={{justifyContent:'center'}}>
-          <Text style={styles.cardTxt}>Warranty & Maintenance</Text>
+
+      <View style={{flexDirection: 'row', flex: 0.5, bottom: 5, right: 3}}>
+        <TouchableOpacity onPress={()=> navigation.navigate('Warranty')}>
+          <View style={styles.cardList}>
+            <View style={styles.productIcon}>
+              <Image
+                source={require('../../Assets/setting.png')}
+                style={{alignItems: 'center',resizeMode:"center"}}
+              />
+            </View>
+            <View style={{justifyContent: 'center'}}>
+              <Text style={styles.cardTxt}>Warranty & Maintenance</Text>
+            </View>
           </View>
-      </View>
-      </TouchableOpacity>
-  
-  <TouchableOpacity>
-     <View style={{left:10}}>
-      <View style={styles.cardList}>
-        <View
-          style={styles.productIcon}>
-          <Image
-            source={require('../../Assets/product.png')}
-            style={{alignItems: 'center',resizeMode:'center'}}
-          />
-        </View>
-        <View style={{justifyContent:'center'}}>
-          <Text style={styles.cardTxt}>My Product</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={()=> navigation.navigate('Product')}>
+          <View style={{left: 10}}>
+            <View style={styles.cardList}>
+              <View style={styles.productIcon}>
+                <Image
+                  source={require('../../Assets/product.png')}
+                  style={{alignItems: 'center', resizeMode: 'center'}}
+                />
+              </View>
+              <View style={{justifyContent: 'center'}}>
+                <Text style={styles.cardTxt}>My Product</Text>
+              </View>
+            </View>
           </View>
-      </View>
-      </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
       </View>
 
-      <View style={{flexDirection:'row',bottom:6,right:3}}>
-        <TouchableOpacity>
-      <View style={styles.cardList}>
-        <View style={styles.productIcon}>
-          <Image
-            source={require('../../Assets/service.png')}
-            style={{alignItems: 'center'}}
-          />
-        </View>
-        <View style={{justifyContent:'center'}}>
-          <Text style={styles.cardTxt}>Book Service</Text>
+      <View style={{flexDirection: 'row', bottom: 15, right: 3}}>
+        <TouchableOpacity onPress={()=> navigation.navigate('Service')}>
+          <View style={styles.cardList}>
+            <View style={styles.productIcon}>
+              <Image
+                source={require('../../Assets/service.png')}
+                style={{alignItems: 'center',resizeMode:"center"}}
+              />
+            </View>
+            <View style={{justifyContent: 'center'}}>
+              <Text style={styles.cardTxt}>Book Service</Text>
+            </View>
           </View>
-      </View>
-      </TouchableOpacity>
-  
-      <TouchableOpacity>
-     <View style={{left:10}}>
-      <View style={styles.cardList}>
-        <View style={styles.productIcon} >
-          <Image
-            source={require('../../Assets/shop.png')}
-            style={{alignItems: 'center'}}
-          />
-        </View>
-        <View style={{justifyContent:'center'}}>
-          <Text style={styles.cardTxt}>My Shop</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={()=> navigation.navigate('Shop')}>
+          <View style={{left: 10}}>
+            <View style={styles.cardList}>
+              <View style={styles.productIcon}>
+                <Image
+                  source={require('../../Assets/Shops.png')}
+                  style={{alignItems: 'center',resizeMode:'center'}}
+                />
+              </View>
+              <View style={{justifyContent: 'center'}}>
+                <Text style={styles.cardTxt}>My Shop</Text>
+              </View>
+            </View>
           </View>
-      </View>
-      </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
       </View>
     </View>
   );

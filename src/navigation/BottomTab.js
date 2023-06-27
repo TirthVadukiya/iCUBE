@@ -2,8 +2,10 @@ import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Home from '../screens/HomeScreen/Home';
+import MainStack from './MainStack';
 import Safety from '../screens/SafetyScreen/Safety';
+import Product from '../screens/ProductScreen/Product';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -11,43 +13,64 @@ const Tab = createBottomTabNavigator();
 const BottomTab = () => {
   return (
     
-      <Tab.Navigator
-        style={styles.title}
-        screenOptions={({route}) => ({
-          tabBarIcon: ({focused, color, size}) => {
-            
-            let iconName;
-            let rn = route.name;
+    <Tab.Navigator
+    initialRouteName='Home'
+    screenOptions={{
+      headerShown: false,
+      // tabBarShowLabel: false,
+      tabBarActiveTintColor: "#EC581F",
+      tabBarInactiveTintColor: "#727270",
+      tabBarStyle: {
+        height: Platform.OS == 'ios' ? 80 : 65,
+        borderRadius:20
+      },
 
-            if (rn === 'Home') {
-              iconName = focused ? 'home' : 'home-outline';
-            } else if (rn === 'Like') {
-              iconName = focused ? 'heart' : 'heart-outline';
-            } else if (rn === 'Person') {
-              iconName = focused ? 'person' : 'person-outline';
-            }
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={'#background: rgba(243, 93, 56, 1)'}/>;
+      tabBarItemStyle: {
+        backgroundColor: '#E9E9E9',
+        borderCurve:"circular",
+        // borderRadius:10
+      },
+    }}>
+    <Tab.Screen
+      name='MainStack'
+      component={MainStack}
+      options={{
+        tabBarLabel: 'Home',
+        tabBarIcon: ({color, size}) => (
+         <Image source={require("../Assets/HomeLogo.png")} style={{resizeMode:"contain"}}/>
+        ),
+      }}
+    />
 
-          },
-          tabBarActiveTintColor: 'tomato',
-          tabBarInactiveTintColor: 'gray', 
-          // tabBarShowLabel: false,
-        })}
-        
-        >
-        <Tab.Screen name="Home" component={Home} options={{headerShown:false}}/>
-        <Tab.Screen name="Like" component={Safety}  options={{headerShown:false}}/>
-        {/* <Tab.Screen name="Person" component={Person}  options={{headerShown:false}}/> */}
-       
-      </Tab.Navigator>
+    <Tab.Screen
+      name='  '
+      component={Product}
+      options={{
+        tabBarShowLabel:false,
+        tabBarIcon: ({color, size}) => (
+          <Image source={require("../Assets/sos.png")} style={{resizeMode:"contain",bottom:10}}/>
+        ),
+      }}
+    />
+    <Tab.Screen
+      name='safety'
+      component={Safety}
+      options={{
+        tabBarLabel: 'Safety Manual',
+        tabBarIcon: ({color, size}) => (
+          <Image source={require("../Assets/SafetyLogo.png")} style={{resizeMode:"contain"}}/>
+        ),
+      }}
+    />
+
+  </Tab.Navigator>
    
   );
 };
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 30,
+    fontSize: 80,
     textAlign: 'center',
     borderTopLeftRadius: 20,
     borderTopRightRadius:20,

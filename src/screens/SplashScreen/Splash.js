@@ -10,7 +10,7 @@ const SplashScreen = ({navigation}) => {
     <View style={{flex:1,}}>
     
     
-       <Image style={styles.main} source={require('../../Assets/Home.jpg')}/>
+       <Image style={styles.main} source={require('../../Assets/Logo.png')}/>
        <Text style={styles.images }>Travel App</Text>
        {/* <View style={{flex:3, top:520,flexDirection:'row',justifyContent:'space-evenly',marginVertical:10,}}>
        </View>

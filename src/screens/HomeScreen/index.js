@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
   cardList: {
     backgroundColor: '#F7F7F7',
-    height: 148,
+    height: 140,
     width: 152,
     borderRadius: 20,
     left: 26,
