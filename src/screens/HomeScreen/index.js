@@ -2,12 +2,21 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  headerBarView: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    height: '12%',
+    alignItems: 'center',
+  },
   ProfileImg: {
-    borderRadius: 30,
-    height: 30,
-    width: 30,
-    left: 2,
-    top: 2,
+    right: 10,
+    backgroundColor: 'orange',
+    height: 35,
+    width: 35,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor:"orange",borderWidth:1
   },
   logoImage: {
     resizeMode: 'contain',
@@ -40,8 +49,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Raleway',
     fontWeight: '700',
     color: '#FFF',
-    top: 25,
-    left: 5,
+    top: 27,
+    left: 10,
   },
   cardList: {
     backgroundColor: '#F7F7F7',

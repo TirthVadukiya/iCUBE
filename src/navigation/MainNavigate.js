@@ -13,6 +13,7 @@ import Home from '../screens/HomeScreen/Home';
 import BottomTab from './BottomTab';
 import Product from '../screens/ProductScreen/Product';
 import DrawerNavigate from './DrawerNavigate';
+import CustomDrawer from '../Components/CustomDrawer';
 
 
 const Stack = createNativeStackNavigator();
@@ -24,9 +25,9 @@ const MainNavigate = () => {
 
    <Stack.Navigator screenOptions={{headerShown:false}}  initialRouteName={SplashScreen}>
       {/* <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false}}/> */}
-      {/* <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
-      <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/> */}
-      <Stack.Screen name='BottomTab' component={DrawerNavigate} />  
+      <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
+      {/* <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/>
+      <Stack.Screen name='BottomTab' component={DrawerNavigate} />   */}
      
    </Stack.Navigator>
    </NavigationContainer>

@@ -18,41 +18,24 @@ const Home = ({navigation}) => {
     <View style={{flex: 1, backgroundColor: 'white'}}>
       {/* header bar */}
       <View
-        style={{
-          backgroundColor: 'white',
-          flexDirection: 'row',
-          height: '12%',
-          alignItems: 'center',
-        }}>
-         <TouchableOpacity onPress={()=> console.warn("hello")}>
-          <View
-            style={{
-              height: 34,
-              width: 34,
-              backgroundColor: 'gray',
-              borderRadius: 30,
-              left: 12,
-            }}>
-            <Image
-              source={require('../../Assets/UserImage.png')}
-              style={styles.ProfileImg}
-            />
-          </View>
-        </TouchableOpacity> 
-     
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Image
-            source={require('../../Assets/Logo.png')}
-            style={styles.logoImage}
-          />
-        </View>
+        style={styles.headerBarView}>
+         
+         <View style={{flexDirection:"row",flex:1,justifyContent:'space-evenly',alignItems:"center"}}>
+          <TouchableOpacity onPress={()=> navigation.openDrawer()}>
+           {/* <View style={styles.ProfileImg}> */}
+            <Image source={require("../../Assets/images/UserImage.png")} style={styles.ProfileImg} />
+           {/* </View> */}
+          </TouchableOpacity>
+  
         <View>
-          <Icon
-            name="notifications"
-            size={30}
-            style={{color: 'orange', right: 10}}
-          />
+          <Image source={require('../../Assets/images/IcubeLogo.png')} style={{height:36,width:138}}/>
         </View>
+  
+        <View style={{left:10}}>
+          <Icon name="notifications" size={28} color={"#EC581F"}/>
+        </View>
+
+      </View>
       </View>
 
       {/* slider Image */}
@@ -95,7 +78,7 @@ const Home = ({navigation}) => {
           <View style={styles.productView}>
             <View style={{flexDirection: 'row'}}>
               <Image
-                source={require('../../Assets/car.png')}
+                source={require('../../Assets/images/car.png')}
                 style={styles.productImg}
               />
               <Text style={styles.productTxt}>Our Product</Text>
@@ -111,7 +94,7 @@ const Home = ({navigation}) => {
           <View style={styles.cardList}>
             <View style={styles.productIcon}>
               <Image
-                source={require('../../Assets/setting.png')}
+                source={require('../../Assets/images/setting.png')}
                 style={{alignItems: 'center',resizeMode:"center"}}
               />
             </View>
@@ -126,8 +109,8 @@ const Home = ({navigation}) => {
             <View style={styles.cardList}>
               <View style={styles.productIcon}>
                 <Image
-                  source={require('../../Assets/product.png')}
-                  style={{alignItems: 'center', resizeMode: 'center'}}
+                  source={require('../../Assets/images/product.png')}
+                  style={{alignItems: 'center', resizeMode:"center" }}
                 />
               </View>
               <View style={{justifyContent: 'center'}}>
@@ -143,7 +126,7 @@ const Home = ({navigation}) => {
           <View style={styles.cardList}>
             <View style={styles.productIcon}>
               <Image
-                source={require('../../Assets/service.png')}
+                source={require('../../Assets/images/service.png')}
                 style={{alignItems: 'center',resizeMode:"center"}}
               />
             </View>
@@ -158,7 +141,7 @@ const Home = ({navigation}) => {
             <View style={styles.cardList}>
               <View style={styles.productIcon}>
                 <Image
-                  source={require('../../Assets/Shops.png')}
+                  source={require('../../Assets/images/Shops.png')}
                   style={{alignItems: 'center',resizeMode:'center'}}
                 />
               </View>

@@ -37,7 +37,7 @@ const BottomTab = () => {
       options={{
         tabBarLabel: 'Home',
         tabBarIcon: ({color, size}) => (
-         <Image source={require("../Assets/HomeLogo.png")} style={{resizeMode:"contain"}}/>
+         <Image source={require("../Assets/images/HomeLogo.png")} style={{resizeMode:"center"}}/>
         ),
       }}
     />
@@ -48,7 +48,7 @@ const BottomTab = () => {
       options={{
         tabBarShowLabel:false,
         tabBarIcon: ({color, size}) => (
-          <Image source={require("../Assets/sos.png")} style={{resizeMode:"contain",bottom:10}}/>
+          <Image source={require("../Assets/images/sos.png")} style={{resizeMode:"center",bottom:10}}/>
         ),
       }}
     />
@@ -58,7 +58,7 @@ const BottomTab = () => {
       options={{
         tabBarLabel: 'Safety Manual',
         tabBarIcon: ({color, size}) => (
-          <Image source={require("../Assets/SafetyLogo.png")} style={{resizeMode:"contain"}}/>
+          <Image source={require("../Assets/images/SafetyLogo.png")} style={{resizeMode:"center"}}/>
         ),
       }}
     />
