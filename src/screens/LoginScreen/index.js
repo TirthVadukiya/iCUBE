@@ -9,16 +9,20 @@ const styles = StyleSheet.create({
   LoginTopImg: {
     height: 168,
     width: 430,
+    bottom: 20,
   },
   AppLogoView: {
     alignItems: 'center',
-    top: 15,
     flexDirection: 'column',
+  },
+  AppLogoImg: {
+    bottom: 20,
+    height: 62,
+    width: 235,
   },
   LoginTxtView: {
     flexDirection: 'column',
     alignItems: 'center',
-    bottom: 20,
   },
   LoginTxt1: {
     color: '#EC581F',
@@ -50,9 +54,44 @@ const styles = StyleSheet.create({
     backgroundColor: '#EC581F',
     height: 45,
     flexDirection: 'row',
-    alignItems:"center",
-    justifyContent:'center',
-    borderRadius:10, marginHorizontal: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+    marginHorizontal: 30,
+  },
+  LoginTxt: {
+    fontSize: 14,
+    color: '#FFF',
+    fontWeight: '700',
+    fontFamily: 'Raleway-Bold',
+  },
+  footerImg: {
+    height: 231,
+    width: 431,
+    right: 30,
+  },
+  footerCarImg: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    right: 30,
+  },
+  footerTxtView: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    bottom: 20,
+  },
+  footerTxt1: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: '#FFF',
+    fontFamily: 'Raleway-Regular',
+  },
+  footerTxt2: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#FFF',
+    fontFamily: 'Raleway-Regular',
   },
 });
 

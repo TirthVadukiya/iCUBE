@@ -9,6 +9,10 @@ const styles = StyleSheet.create ({
         justifyContent:"center",
         flex:1,
         backgroundColor:"#FFFFFF"
+      },
+      SplashImg : {
+        height:62,
+        width:235
       }
 })
 

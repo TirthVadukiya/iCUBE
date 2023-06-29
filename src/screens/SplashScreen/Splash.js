@@ -28,7 +28,7 @@ const SplashScreen = ({navigation}) => {
 
   return (
     <View style={styles.main}>
-       <Image  source={require('../../Assets/images/IcubeLogo.png')} style={{resizeMode:"center"}}/>
+       <Image  source={require('../../Assets/images/IcubeLogo.png')} style={styles.SplashImg}/>
     </View>
   )
 }

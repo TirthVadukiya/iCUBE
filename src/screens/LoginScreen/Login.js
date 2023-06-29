@@ -1,41 +1,55 @@
-import { View, Text,TouchableOpacity, Image,TextInput } from 'react-native'
-import React from 'react'
-import styles from '.'
-
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  TextInput,
+  ImageBackground,
+} from 'react-native';
+import React from 'react';
+import styles from '.';
 
 const Login = ({navigation}) => {
-
-const [number, onChangeNumber] = React.useState('');
+  const [number, onChangeNumber] = React.useState('');
 
   return (
     <View style={styles.main}>
-
       {/* LoginTopImg */}
       <View>
-     <Image source={require("../../Assets/images/Image1.png")} style={styles.LoginTopImg}/>
-     </View>
+        <Image
+          source={require('../../Assets/images/Image1.png')}
+          style={styles.LoginTopImg}
+        />
+      </View>
 
-    {/* AppLogo */}
+      {/* AppLogo */}
 
-    <View style={styles.AppLogoView}>
-      <Image source={require('../../Assets/images/IcubeLogo.png')} style={{height:62.5,width:235}}/>
-      
-    </View>
+      <View style={styles.AppLogoView}>
+        <Image
+          source={require('../../Assets/images/IcubeLogo.png')}
+          style={styles.AppLogoImg}
+        />
+      </View>
 
-    <View style={{alignItems:'center',marginVertical:-37}}>
-      <Image source={require("../../Assets/images/parking.png")} style={{resizeMode:'center'}}/>
-    </View>
-    
-     {/* LoginTxt */}
+      <View style={{alignItems: 'center'}}>
+        <Image
+          source={require('../../Assets/images/parking.png')}
+          style={{height: 80, width: 80, bottom: 10}}
+        />
+      </View>
 
-     <View style={styles.LoginTxtView}>
-      <Text style={styles.LoginTxt1}>Log In</Text>
-      <Text style={styles.LoginTxt2}>Use your Diesel Sports account to continue</Text>
-     </View>
+      {/* LoginTxt */}
 
-     {/* TextInput */}
+      <View style={styles.LoginTxtView}>
+        <Text style={styles.LoginTxt1}>Log In</Text>
+        <Text style={styles.LoginTxt2}>
+          Use your Diesel Sports account to continue
+        </Text>
+      </View>
 
-     <View style={styles.viewTextInput}>
+      {/* TextInput */}
+
+      <View style={styles.viewTextInput}>
         <TextInput
           style={styles.txtInput}
           onChangeText={onChangeNumber}
@@ -49,15 +63,40 @@ const [number, onChangeNumber] = React.useState('');
 
       {/* LoginBtn */}
 
-     <TouchableOpacity>
-      <View style={styles.LoginBtn}>
-        <Text>LOGIN</Text>
-        <Image source={require("../../Assets/images/loginLogo.png")} style={{height:20,width:19}}/>
+      <TouchableOpacity onPress={() => navigation.navigate('MainHome')}>
+        <View style={styles.LoginBtn}>
+          <Text style={styles.LoginTxt}>LOGIN</Text>
+          <Image
+            source={require('../../Assets/images/LoginLogo.png')}
+            style={{height: 20, width: 20, left: 5}}
+          />
+        </View>
+      </TouchableOpacity>
+
+      {/* BottomImg */}
+
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+        <ImageBackground
+          source={require('../../Assets/images/footer.png')}
+          style={styles.footerImg}>
+          <View style={styles.footerCarImg}>
+            <Image
+              source={require('../../Assets/images/footerCar.png')}
+              style={{height: 170, width: 160, top: 15}}
+            />
+          </View>
+          <View style={styles.footerTxtView}>
+            <Text style={styles.footerTxt1}>Don’t have an account? </Text>
+            <Text
+              style={styles.footerTxt2}
+              onPress={() => navigation.navigate('Sign')}>
+              Sign Up
+            </Text>
+          </View>
+        </ImageBackground>
       </View>
-     </TouchableOpacity>
-
     </View>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
