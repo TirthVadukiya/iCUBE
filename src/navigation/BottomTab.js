@@ -19,17 +19,20 @@ const BottomTab = () => {
       headerShown: false,
       // tabBarShowLabel: false,
       tabBarActiveTintColor: "#EC581F",
-      tabBarInactiveTintColor: "#727270",
+      // tabBarInactiveTintColor: "#727270",
+      // tabBarAccessibilityLabel:false,
       tabBarStyle: {
-        height: Platform.OS == 'ios' ? 80 : 65,
-        borderRadius:20
+        height: Platform.OS == 'ios' ? 80 : 50,
+        borderTopLeftRadius:20,
+        borderTopRightRadius:20,
+        backgroundColor:"#E9E9E9"
       },
 
-      tabBarItemStyle: {
-        backgroundColor: '#E9E9E9',
-        // borderCurve:"circular",
-        // borderRadius:10
-      },
+      // tabBarItemStyle: {
+      //   backgroundColor: '#E9E9E9',
+      //   borderCurve:"circular",
+      //   // borderRadius:10
+      // },
     }}>
     <Tab.Screen
       name='MainStack'
@@ -37,7 +40,7 @@ const BottomTab = () => {
       options={{
         tabBarLabel: 'Home',
         tabBarIcon: ({color, size}) => (
-         <Image source={require("../Assets/images/HomeLogo.png")} style={{resizeMode:"center"}}/>
+         <Image source={require("../../assets/images/HomeLogo.png")} style={{resizeMode:"center"}}/>
         ),
       }}
     />
@@ -48,7 +51,7 @@ const BottomTab = () => {
       options={{
         tabBarShowLabel:false,
         tabBarIcon: ({color, size}) => (
-          <Image source={require("../Assets/images/sos.png")} style={{resizeMode:"center",bottom:10}}/>
+          <Image source={require("../../assets/images/sos.png")} style={{resizeMode:"center"}}/>
         ),
       }}
     />
@@ -58,7 +61,7 @@ const BottomTab = () => {
       options={{
         tabBarLabel: 'Safety Manual',
         tabBarIcon: ({color, size}) => (
-          <Image source={require("../Assets/images/SafetyLogo.png")} style={{resizeMode:"center"}}/>
+          <Image source={require("../../assets/images/SafetyLogo.png")} style={{resizeMode:"center"}}/>
         ),
       }}
     />
@@ -67,19 +70,6 @@ const BottomTab = () => {
    
   );
 };
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 80,
-    textAlign: 'center',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius:20,
-    // borderLeftWidth:0.2,
-    // borderRightWidth:0.2,
-    backgroundColor:'blue',
-    color:'black',
-  },
-});
 
 export default BottomTab;
 

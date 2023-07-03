@@ -12,7 +12,7 @@ const Otp = (props) => {
 
       <View>
         <Image
-          source={require('../../Assets/images/Image1.png')}
+          source={require('../../../assets/images/Image1.png')}
           style={styles.SignUpTopImg}
         />
       </View>
@@ -21,7 +21,7 @@ const Otp = (props) => {
 
       <View style={styles.AppLogoView}>
         <Image
-          source={require('../../Assets/images/IcubeLogo.png')}
+          source={require('../../../assets/images/IcubeLogo.png')}
           style={styles.AppLogoImg}
         />
       </View>

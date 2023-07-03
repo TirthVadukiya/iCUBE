@@ -13,7 +13,7 @@ const Signup = ({navigation}) => {
 
       <View>
         <Image
-          source={require('../../Assets/images/Image1.png')}
+          source={require('../../../assets/images/Image1.png')}
           style={styles.LoginTopImg}
         />
       </View>
@@ -22,7 +22,7 @@ const Signup = ({navigation}) => {
 
       <View style={styles.AppLogoView}>
         <Image
-          source={require('../../Assets/images/IcubeLogo.png')}
+          source={require('../../../assets/images/IcubeLogo.png')}
           style={styles.AppLogoImg}
         />
       </View>
@@ -78,7 +78,7 @@ const Signup = ({navigation}) => {
         <View style={styles.LoginBtn}>
           <Text style={styles.LoginTxt}>SIGNUP</Text>
           <Image
-            source={require('../../Assets/images/LoginLogo.png')}
+            source={require('../../../assets/images/LoginLogo.png')}
             style={{height: 20, width: 20, left: 5}}
           />
         </View>
@@ -88,11 +88,11 @@ const Signup = ({navigation}) => {
 
      <View style={{justifyContent: 'flex-end'}}>
         <ImageBackground
-          source={require('../../Assets/images/footer.png')}
+          source={require('../../../assets/images/footer.png')}
           style={styles.footerImg}>
           <View style={styles.footerCarImg}>
             <Image
-              source={require('../../Assets/images/footerCar.png')}
+              source={require('../../../assets/images/footerCar.png')}
               style={{height: 150, width: 140,bottom:10}}
             />
           </View>

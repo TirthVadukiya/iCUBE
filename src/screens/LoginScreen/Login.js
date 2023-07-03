@@ -17,7 +17,7 @@ const Login = ({navigation}) => {
       {/* LoginTopImg */}
       <View>
         <Image
-          source={require('../../Assets/images/Image1.png')}
+          source={require('../../../assets/images/Image1.png')}
           style={styles.LoginTopImg}
         />
       </View>
@@ -26,14 +26,14 @@ const Login = ({navigation}) => {
 
       <View style={styles.AppLogoView}>
         <Image
-          source={require('../../Assets/images/IcubeLogo.png')}
+          source={require('../../../assets/images/IcubeLogo.png')}
           style={styles.AppLogoImg}
         />
       </View>
 
       <View style={{alignItems: 'center'}}>
         <Image
-          source={require('../../Assets/images/parking.png')}
+          source={require('../../../assets/images/parking.png')}
           style={{height: 80, width: 80, bottom: 10}}
         />
       </View>
@@ -68,7 +68,7 @@ const Login = ({navigation}) => {
         <View style={styles.LoginBtn}>
           <Text style={styles.LoginTxt}>LOGIN</Text>
           <Image
-            source={require('../../Assets/images/LoginLogo.png')}
+            source={require('../../../assets/images/LoginLogo.png')}
             style={{height: 20, width: 20, left: 5}}
           />
         </View>
@@ -78,11 +78,11 @@ const Login = ({navigation}) => {
 
       <View style={{ justifyContent: 'flex-end',marginTop:42}}>
         <ImageBackground
-          source={require('../../Assets/images/footer.png')}
+          source={require('../../../assets/images/footer.png')}
           style={styles.footerImg}>
           <View style={styles.footerCarImg}>
             <Image
-              source={require('../../Assets/images/footerCar.png')}
+              source={require('../../../assets/images/footerCar.png')}
               style={{height: 170, width: 160, top: 15}}
             />
           </View>

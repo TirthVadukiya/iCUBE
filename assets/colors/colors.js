@@ -8,6 +8,9 @@ export const COLORS = {
     Text: "#FFF",
     background: "#F4F4F4",
     TxtBlack: "#333",
+    cardView : "#F7F7F7",
+    text1 : "#000000",
+    bottomTab : "#6F6F6E"
   };
   
   export default COLORS;

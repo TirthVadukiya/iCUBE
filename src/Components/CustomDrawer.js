@@ -18,7 +18,7 @@ function CustomDrawer({props, navigation}) {
       {/* Profile Detail */}
       <View style={{left: 20, marginTop: 20}}>
         <Image
-          source={require('../Assets/images/UserImage.png')}
+          source={require('../../assets/images/UserImage.png')}
           style={styles.ProfileImg}
         />
         <View style={styles.ProfileTxtView}>
@@ -69,7 +69,7 @@ function CustomDrawer({props, navigation}) {
       <TouchableOpacity style={styles.LogoutBtn}>
         {/* <View style={styles.LogoutBtn}> */}
           <Image
-            source={require('../Assets/images/logoutLogo.png')}
+            source={require('../../assets/images/logoutLogo.png')}
             style={{resizeMode: 'center',right:5}}
           />
           <Text style={styles.logoutBtnTxt}>Logout</Text>

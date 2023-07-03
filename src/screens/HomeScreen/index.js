@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
+import COLORS from '../../../assets/colors/colors';
 
 const styles = StyleSheet.create({
   headerBarView: {
@@ -22,57 +23,48 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: 30,
   },
-  productView: {
-    height: 85,
-    backgroundColor: '#EC581F',
-    width: 310,
-    borderRadius: 18,
-    marginLeft: 25,
-    top: 65,
+  productView : {
+    backgroundColor:COLORS.black,
+    height:65,width:"89%",
+    margin:20,borderRadius:18,marginTop:80,
+    flexDirection:"row",alignItems:"center"
   },
-  productIcon: {
-    backgroundColor: '#FFFFFF',
-    height: 68,
-    width: 68,
-    borderRadius: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
+  productImg : {
+    resizeMode:"cover",
+    height:137,width:163,bottom:45,
   },
-  productImg: {
-    resizeMode: 'contain',
-    height: 140,
-    bottom: 60,
-    left: 12,
+  productImgTxt : {
+    color:COLORS.primary,
+    fontSize:22,
+    fontWeight:"700",
+    fontFamily:"Raleway-Bold"
+  }, 
+  cardMainView : {
+    backgroundColor:COLORS.cardView,
+    height:135,
+    width:"45%",
+    borderRadius:18,
+   
+   alignItems:"center",justifyContent:"center"
   },
-  productTxt: {
-    fontSize: 22,
-    fontFamily: 'Raleway',
-    fontWeight: '700',
-    color: '#FFF',
-    top: 27,
-    left: 10,
+  cardView : {
+    backgroundColor:COLORS.primary,
+    height:"40%",
+    width:"40%",
+    borderRadius:50,
+    alignItems:"center",justifyContent:"center",margin:5
   },
-  cardList: {
-    backgroundColor: '#F7F7F7',
-    height: 140,
-    width: 152,
-    borderRadius: 20,
-    left: 26,
-    opacity: 10,
-    shadowOpacity: 10,
-    shadowColor: 'black',
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'center',
+  cardViewImg : {
+    resizeMode:"center",
+    
   },
-  cardTxt: {
-    fontSize: 16,
-    fontFamily: 'Raleway',
-    fontWeight: '600',
-    color: 'black',
-    textAlign: 'center',
-    margin: 5,
-  },
+  cardTxt : {
+    color:COLORS.text1,
+    fontSize:16,
+    fontWeight:"600",
+    fontFamily:"Raleway-SemiBold"
+  }
+
 });
 
 export default styles;

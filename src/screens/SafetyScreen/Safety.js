@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
+  ScrollView
 } from 'react-native';
 import React from 'react';
 import styles from '.';
@@ -24,7 +25,7 @@ const Safety = ({navigation}) => {
           <TouchableOpacity onPress={() => navigation.goBack()}>
             {/* <View style={styles.ProfileImg}> */}
             <Image
-              source={require('../../Assets/images/arrowBack.png')}
+              source={require('../../../assets/images/arrowBack.png')}
               style={styles.arrowBackBtn}
             />
             {/* </View> */}
@@ -32,7 +33,7 @@ const Safety = ({navigation}) => {
 
           <View>
             <Image
-              source={require('../../Assets/images/IcubeLogo.png')}
+              source={require('../../../assets/images/IcubeLogo.png')}
               style={{height: 36, width: 138}}
             />
           </View>
@@ -44,25 +45,26 @@ const Safety = ({navigation}) => {
       </View>
 
       {/* Videos */}
-
+   
+     <ScrollView style={{flex:1}}>
       <View style={{margin: 10, flexDirection: 'row'}}>
         <ImageBackground
-          source={require('../../Assets/images/carVideo.png')}
+          source={require('../../../assets/images/carVideo.png')}
           style={{height: 115, width: 168}}>
           <TouchableOpacity style={styles.videoPlayBtn}>
             <Image
-              source={require('../../Assets/images/playBtn.png')}
+              source={require('../../../assets/images/playBtn.png')}
               style={{resizeMode: 'center'}}
             />
           </TouchableOpacity>
         </ImageBackground>
 
         <ImageBackground
-          source={require('../../Assets/images/carVideo.png')}
+          source={require('../../../assets/images/carVideo.png')}
           style={{height: 115, width: 168, left: 5}}>
           <TouchableOpacity style={styles.videoPlayBtn}>
             <Image
-              source={require('../../Assets/images/playBtn.png')}
+              source={require('../../../assets/images/playBtn.png')}
               style={{resizeMode: 'center'}}
             />
           </TouchableOpacity>
@@ -71,11 +73,11 @@ const Safety = ({navigation}) => {
 
       <View style={{left: 10}}>
         <ImageBackground
-          source={require('../../Assets/images/carVideo.png')}
+          source={require('../../../assets/images/carVideo.png')}
           style={{height: 115, width: 168}}>
           <TouchableOpacity style={styles.videoPlayBtn}>
             <Image
-              source={require('../../Assets/images/playBtn.png')}
+              source={require('../../../assets/images/playBtn.png')}
               style={{resizeMode: 'center'}}
             />
           </TouchableOpacity>
@@ -91,7 +93,7 @@ const Safety = ({navigation}) => {
       <TouchableOpacity>
         <View style={styles.pdfView}>
           <View style={styles.PdfTxtView}>
-            <Image source={require('../../Assets/images/pdf.png')} style={styles.pdfImg}/>
+            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
           </View>
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
@@ -100,7 +102,7 @@ const Safety = ({navigation}) => {
        <TouchableOpacity>
         <View style={styles.pdfView}>
           <View style={styles.PdfTxtView}>
-            <Image source={require('../../Assets/images/pdf.png')} style={styles.pdfImg}/>
+            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
           </View>
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
@@ -109,7 +111,7 @@ const Safety = ({navigation}) => {
        <TouchableOpacity>
         <View style={styles.pdfView}>
           <View style={styles.PdfTxtView}>
-            <Image source={require('../../Assets/images/pdf.png')} style={styles.pdfImg}/>
+            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
           </View>
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
@@ -118,11 +120,12 @@ const Safety = ({navigation}) => {
        <TouchableOpacity>
         <View style={styles.pdfView}>
           <View style={styles.PdfTxtView}>
-            <Image source={require('../../Assets/images/pdf.png')} style={styles.pdfImg}/>
+            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
           </View>
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
         </TouchableOpacity>
+        </ScrollView>
     </View>
   );
 };
