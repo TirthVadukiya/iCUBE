@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
+ 
 } from '@react-navigation/drawer';
 import {
   Alert,
@@ -66,15 +65,17 @@ function CustomDrawer({props, navigation}) {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-        <View style={styles.LogoutBtn}>
+   
+      <TouchableOpacity style={styles.LogoutBtn}>
+        {/* <View style={styles.LogoutBtn}> */}
           <Image
             source={require('../Assets/images/logoutLogo.png')}
             style={{resizeMode: 'center',right:5}}
           />
           <Text style={styles.logoutBtnTxt}>Logout</Text>
-        </View>
+        {/* </View> */}
       </TouchableOpacity>
+     
     </DrawerContentScrollView>
   );
 }
@@ -111,15 +112,12 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   LogoutBtn: {
-    marginVertical: '100%',
     backgroundColor: '#EC581F',
-    height: 48,
-    width: 145,
-    margin: 20,
+    height: 45,
+    width: 155,
     borderRadius: 25,
-    justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
+    justifyContent: 'center',flexDirection:'row',marginTop:"100%",left:15
   },
   DrawerTxt: {
     color: '#EC581F',

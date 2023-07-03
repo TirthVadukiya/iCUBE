@@ -27,7 +27,7 @@ const BottomTab = () => {
 
       tabBarItemStyle: {
         backgroundColor: '#E9E9E9',
-        borderCurve:"circular",
+        // borderCurve:"circular",
         // borderRadius:10
       },
     }}>

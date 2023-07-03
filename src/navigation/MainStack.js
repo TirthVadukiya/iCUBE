@@ -20,7 +20,7 @@ function MainStack() {
       <Stack.Screen name='home' component={Home} />
       <Stack.Screen name='Warranty' component={Warranty} />
       <Stack.Screen name='Product' component={Product} />
-      <Stack.Screen name='Service' component={Service} />
+      {/* <Stack.Screen name='Service' component={Service} /> */}
       <Stack.Screen name='Shop' component={Shop} />
     </Stack.Navigator>
   );

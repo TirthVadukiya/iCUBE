@@ -14,6 +14,7 @@ import Product from '../screens/ProductScreen/Product';
 import DrawerNavigate from './DrawerNavigate';
 import CustomDrawer from '../Components/CustomDrawer';
 import Otp from '../screens/OtpScreen/Otp';
+import Service from '../screens/ServiceScreen/Service';
 
 
 const Stack = createNativeStackNavigator();
@@ -24,11 +25,12 @@ const MainNavigate = () => {
     <NavigationContainer>
 
    <Stack.Navigator screenOptions={{headerShown:false}}  initialRouteName={SplashScreen}>
-      <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false}}/>
+      {/* <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false}}/>
       <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
       <Stack.Screen name='Otp' component={Otp} options={{headerShown:false}}/>
-      <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/>
-      <Stack.Screen name='MainHome' component={DrawerNavigate} />  
+      <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/> */}
+      <Stack.Screen name='MainHome' component={DrawerNavigate} />
+      <Stack.Screen name='Service' component={Service} />  
      
    </Stack.Navigator>
    </NavigationContainer>

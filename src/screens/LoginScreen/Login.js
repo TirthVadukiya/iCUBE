@@ -55,6 +55,7 @@ const Login = ({navigation}) => {
           onChangeText={onChangeNumber}
           value={number}
           placeholder="Mobile Number"
+          maxLength={10}
           keyboardType="numeric"
           placeholderTextColor={'#AEA8B2'}
           secureTextEntry
@@ -75,7 +76,7 @@ const Login = ({navigation}) => {
 
       {/* BottomImg */}
 
-      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+      <View style={{ justifyContent: 'flex-end',marginTop:42}}>
         <ImageBackground
           source={require('../../Assets/images/footer.png')}
           style={styles.footerImg}>

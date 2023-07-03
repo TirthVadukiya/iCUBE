@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     fontWeight:"400",
     color:"black",
     textAlign:"center",
-    fontFamily:"Merriweather-Regular",
+    fontFamily:"Raleway-Regular",
     top:5
   },
   OtpTimer : {
