@@ -21,6 +21,12 @@ const styles = StyleSheet.create ({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  headerTxt : {
+     fontSize:22,
+     color:COLORS.black,
+     fontWeight:"700",
+     fontFamily:'Raleway-Bold'
+  },
   productView : {
     backgroundColor:COLORS.bottomTab,
     height:120,
@@ -35,7 +41,28 @@ const styles = StyleSheet.create ({
     fontWeight:"700",
     fontSize:22,
     fontFamily:"Raleway-Bold"
-  }
+  },
+  productCarImg : {
+    // resizeMode:"center",
+    height:100,width:205
+    
+  },
+  productTxt1 : {
+    color: COLORS.Text,
+    fontWeight:"700",
+    fontSize:22,
+    fontFamily:"Raleway-Bold",top:30
+  },
+  productCar2Img : {
+    // resizeMode:"center",
+    height:125,width:153,justifyContent:"center"
+    
+  },
+  productCar3Img : {
+    // resizeMode:"center",
+    height:125,width:85,justifyContent:"center"
+    
+  },
 })
 
 export default styles;

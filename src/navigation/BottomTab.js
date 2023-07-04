@@ -19,13 +19,13 @@ const BottomTab = () => {
       headerShown: false,
       // tabBarShowLabel: false,
       tabBarActiveTintColor: "#EC581F",
-      // tabBarInactiveTintColor: "#727270",
-      // tabBarAccessibilityLabel:false,
+      // tabBarActiveBackgroundColor:"black",
       tabBarStyle: {
-        height: Platform.OS == 'ios' ? 80 : 50,
+        height: Platform.OS == 'ios' ? 80 : 65,
         borderTopLeftRadius:20,
         borderTopRightRadius:20,
-        backgroundColor:"#E9E9E9"
+         backgroundColor:"#E9E9E9"
+        
       },
 
       // tabBarItemStyle: {
@@ -49,9 +49,8 @@ const BottomTab = () => {
       name='  '
       component={Product}
       options={{
-        tabBarShowLabel:false,
         tabBarIcon: ({color, size}) => (
-          <Image source={require("../../assets/images/sos.png")} style={{resizeMode:"center"}}/>
+          <Image source={require("../../assets/images/sos.png")} style={styles.sosImg}/>
         ),
       }}
     />
@@ -70,6 +69,12 @@ const BottomTab = () => {
    
   );
 };
+
+const styles = StyleSheet.create({
+  sosImg : {
+   height:68,width:67,bottom:10
+  }
+})
 
 export default BottomTab;
 

@@ -40,7 +40,7 @@ const Home = ({navigation}) => {
       </View>
 
      
-     <ScrollView  style={{backgroundColor:COLORS.primary,flex:1}}>
+     <ScrollView  style={{backgroundColor:COLORS.primary}}>
     
          {/* slider Image */}
    
@@ -87,14 +87,14 @@ const Home = ({navigation}) => {
 
        <View style={{flex:1}}>
         <View style={{flexDirection:"row",margin:18,justifyContent:"space-evenly",bottom:20}}>
-          <TouchableOpacity style={styles.cardMainView}>
+          <TouchableOpacity style={styles.cardMainView} onPress={()=> navigation.navigate("Warranty")}>
             <View style={styles.cardView}>
               <Image source={require("../../../assets/images/setting.png")} style={styles.cardViewImg}/ >
             </View>
             <Text style={styles.cardTxt}>Warranty & Maintenance</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.cardMainView}>
+          <TouchableOpacity style={styles.cardMainView} onPress={()=> navigation.navigate("Product")}>
            <View style={styles.cardView}>
             <Image source={require("../../../assets/images/product.png")} style={styles.cardViewImg}/>
            </View>

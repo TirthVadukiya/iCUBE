@@ -27,10 +27,7 @@ const OurProduct = ({navigation}) => {
           </TouchableOpacity>
 
           <View>
-            <Image
-              source={require('../../../assets/images/IcubeLogo.png')}
-              style={{height: 36, width: 138}}
-            />
+             <Text style={styles.headerTxt}>Our Product</Text>
           </View>
 
           <View style={{left: 10}}>
@@ -58,24 +55,24 @@ const OurProduct = ({navigation}) => {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.productView}>
-                <View style={{alignItems:"center",bottom:55}} >
-                    <Image source={require("../../../assets/images/car.png")} style={styles.productImg}/>
-                    <Text style={styles.productTxt}>Suspended Parking Systems</Text>
+                <View style={{alignItems:"center",bottom:50}} >
+                    <Image source={require("../../../assets/images/car1.png")} style={styles.productCarImg}/>
+                    <Text style={styles.productTxt1}>Suspended Parking Systems</Text>
                 </View>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.productView}>
-                <View style={{alignItems:"center",bottom:55}} >
-                    <Image source={require("../../../assets/images/car.png")} style={styles.productImg}/>
-                    <Text style={styles.productTxt}>Pit Parking Systems</Text>
+                <View style={{alignItems:"center",bottom:53,justifyContent:"center"}} >
+                    <Image source={require("../../../assets/images/car2.png")} style={styles.productCar2Img}/>
+                    <Text style={styles.productTxt1}>Pit Parking Systems</Text>
                 </View>
             </TouchableOpacity>
 
-          <View style={{marginBottom:100}}>
+          <View style={{marginBottom:12}}>
           <TouchableOpacity style={styles.productView}>
                 <View style={{alignItems:"center",bottom:55}} >
-                    <Image source={require("../../../assets/images/car.png")} style={styles.productImg}/>
-                    <Text style={styles.productTxt}>Rotary Parking Systems</Text>
+                    <Image source={require("../../../assets/images/car3.png")} style={styles.productCar3Img}/>
+                    <Text style={styles.productTxt1}>Rotary Parking Systems</Text>
                 </View>
             </TouchableOpacity>
          </View>
