@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     width: 155,
     borderRadius: 25,
     alignItems: 'center',
-    justifyContent: 'center',flexDirection:'row',marginTop:"100%",left:15
+    justifyContent: 'center',flexDirection:'row',marginTop:"90%",left:15,marginBottom:20
   },
   DrawerTxt: {
     color: '#EC581F',

@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
   },
   ProfileImg: {
     right: 10,
-    backgroundColor: 'orange',
     height: 35,
     width: 35,
     borderRadius: 20,

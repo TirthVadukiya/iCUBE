@@ -5,6 +5,7 @@ import Shop from '../screens/ShopScreen/Shop';
 import Warranty from '../screens/WarrantyScreen/Warranty';
 import Product from '../screens/ProductScreen/Product';
 import OurProduct from '../screens/ProductsScreen/OurProduct';
+import Service from '../screens/ServiceScreen/Service';
 
 
 
@@ -21,6 +22,7 @@ function MainStack() {
       <Stack.Screen name='home' component={Home} />
       <Stack.Screen name='Warranty' component={Warranty} />
       <Stack.Screen name='Product' component={Product} />
+      <Stack.Screen name='Service' component={Service} />
       <Stack.Screen name='Shop' component={Shop} />
       <Stack.Screen name='OurProduct' component={OurProduct} />
     </Stack.Navigator>

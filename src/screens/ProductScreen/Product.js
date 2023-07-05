@@ -1,10 +1,10 @@
-import { View, Text,TouchableOpacity,Image,ImageBackground } from 'react-native'
+import { View, Text,TouchableOpacity,Image,ImageBackground,ScrollView } from 'react-native'
 import React from 'react'
 import styles from '.'
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
-const Product = () => {
+const Product = ({navigation}) => {
   return (
     <View style={styles.main}>
 
@@ -38,6 +38,8 @@ const Product = () => {
 
       {/* productView */}
 
+      <ScrollView style={{flex:1}}>
+
       <View style={{marginTop:30}}>
        <ImageBackground source={require("../../../assets/images/Subtract.png")} style={{height:180,width:350,left:5}}>
         
@@ -62,23 +64,16 @@ const Product = () => {
       </View>
 
       {/* product Video */}
-    
-       <View style={styles.productView}>
-       <ImageBackground
-          source={require('../../../assets/images/carpark.png')}
-          style={{height:"100%",overflow:'hidden',borderRadius:20}}>
-          <TouchableOpacity style={styles.videoPlayBtn}>
-            <Image
-              source={require('../../../assets/images/playBtn.png')}
-              style={{resizeMode: 'center'}}
-            />
+        
+      <ImageBackground source={require("../../../assets/images/carpark.png")} style={{height:180,width:330,left:12,borderRadius:20,overflow:"hidden"}}>
+          <TouchableOpacity style={{marginTop:140,width:27,marginLeft:280}}>
+            <Image source={require("../../../assets/images/VideoIcon.png")} style={{resizeMode:"contain",height:27,width:27}}/>
           </TouchableOpacity>
-        </ImageBackground>
-       </View>
+      </ImageBackground>
 
-      {/* termsBtn */}
+        {/* termsBtn */}
 
-      <View style={{flexDirection:"row"}}>
+        <View style={{flexDirection:"row"}}>
         <TouchableOpacity style={styles.termBtn}>
           <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
           <Text style={styles.termTxt}>Terms & Conditions</Text>
@@ -90,7 +85,7 @@ const Product = () => {
         </TouchableOpacity>
        </View>
 
-       <View style={{flexDirection:"row"}}>
+       <View style={{flexDirection:"row",marginBottom:20}}>
         <TouchableOpacity style={styles.termBtn}>
           <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
           <Text style={styles.termTxt}>Terms & Conditions</Text>
@@ -101,6 +96,7 @@ const Product = () => {
           <Text style={styles.termTxt}>PMS Schedule</Text>
         </TouchableOpacity>
        </View>
+       </ScrollView>
 
     </View>
   )

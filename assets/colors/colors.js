@@ -11,7 +11,9 @@ export const COLORS = {
     cardView : "#F7F7F7",
     text1 : "#000000",
     bottomTab : "#6F6F6E",
-    background1: "#CC0000"
+    background1: "#CC0000",
+    borderClr : "#D6D6D6",
+    text2 : "#2F3C50"
   };
   
   export default COLORS;

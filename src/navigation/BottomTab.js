@@ -6,6 +6,8 @@ import MainStack from './MainStack';
 import Safety from '../screens/SafetyScreen/Safety';
 import Product from '../screens/ProductScreen/Product';
 
+import Sos from '../screens/SosScreen/Sos';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -20,19 +22,13 @@ const BottomTab = () => {
       // tabBarShowLabel: false,
       tabBarActiveTintColor: "#EC581F",
       // tabBarActiveBackgroundColor:"black",
+      
       tabBarStyle: {
         height: Platform.OS == 'ios' ? 80 : 65,
         borderTopLeftRadius:20,
         borderTopRightRadius:20,
-         backgroundColor:"#E9E9E9"
-        
+         backgroundColor:"#E9E9E9",
       },
-
-      // tabBarItemStyle: {
-      //   backgroundColor: '#E9E9E9',
-      //   borderCurve:"circular",
-      //   // borderRadius:10
-      // },
     }}>
     <Tab.Screen
       name='MainStack'
@@ -47,7 +43,7 @@ const BottomTab = () => {
 
     <Tab.Screen
       name='  '
-      component={Product}
+      component={Sos}
       options={{
         tabBarIcon: ({color, size}) => (
           <Image source={require("../../assets/images/sos.png")} style={styles.sosImg}/>

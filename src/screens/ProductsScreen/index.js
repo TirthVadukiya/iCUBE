@@ -63,6 +63,18 @@ const styles = StyleSheet.create ({
     height:125,width:85,justifyContent:"center"
     
   },
+  productTxt2 : {
+    color: COLORS.Text,
+    fontWeight:"700",
+    fontSize:22,
+    fontFamily:"Raleway-Bold",top:20
+  },
+  productTxt3 : {
+    color: COLORS.Text,
+    fontWeight:"700",
+    fontSize:22,
+    fontFamily:"Raleway-Bold",top:15
+  },
 })
 
 export default styles;

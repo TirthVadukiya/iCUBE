@@ -103,14 +103,14 @@ const Home = ({navigation}) => {
         </View>
 
         <View style={{flexDirection:"row",margin:18,justifyContent:"space-evenly",bottom:40}}>
-          <TouchableOpacity style={styles.cardMainView}>
+          <TouchableOpacity style={styles.cardMainView} onPress={()=> navigation.navigate("Service")}>
             <View style={styles.cardView}>
               <Image source={require("../../../assets/images/service.png")} style={styles.cardViewImg}/ >
             </View>
             <Text style={styles.cardTxt}>Book Service</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.cardMainView}>
+          <TouchableOpacity style={styles.cardMainView} onPress={()=> navigation.navigate("Shop")}>
            <View style={styles.cardView}>
             <Image source={require("../../../assets/images/Shops.png")} style={styles.cardViewImg}/>
            </View>

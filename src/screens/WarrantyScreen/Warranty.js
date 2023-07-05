@@ -1,4 +1,4 @@
-import { View, Text,TouchableOpacity,Image,ImageBackground } from 'react-native'
+import { View, Text,TouchableOpacity,Image,ImageBackground,ScrollView } from 'react-native'
 import React from 'react'
 import styles from '.'
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -37,6 +37,8 @@ const Warranty = ({navigation}) => {
       </View>
 
      {/* warrantyCard */}
+
+     <ScrollView>
    
       <View style={{marginTop:30}}>
        <ImageBackground source={require("../../../assets/images/Subtract.png")} style={{height:180,width:350,left:5}}>
@@ -105,7 +107,7 @@ const Warranty = ({navigation}) => {
 
        {/* Warranty */}
 
-       <View style={{marginTop:30}}>
+       <View style={{marginTop:30,marginBottom:20}}>
        <ImageBackground source={require("../../../assets/images/Subtract1.png")} style={{height:180,width:350,left:5}}>
         
       <View style={{alignItems:"flex-end"}}>
@@ -127,7 +129,8 @@ const Warranty = ({navigation}) => {
 
        </ImageBackground>
       </View>
-
+   
+    </ScrollView>
    </View>
      
   )

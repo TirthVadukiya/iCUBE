@@ -30,8 +30,7 @@ const MainNavigate = () => {
       <Stack.Screen name='Otp' component={Otp} options={{headerShown:false}}/>
       <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/> */}
       <Stack.Screen name='MainHome' component={DrawerNavigate} />
-      <Stack.Screen name='Service' component={Service} />  
-     
+      
    </Stack.Navigator>
    </NavigationContainer>
   )

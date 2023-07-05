@@ -117,7 +117,7 @@ const Safety = ({navigation}) => {
         </View>
         </TouchableOpacity>
 
-       <TouchableOpacity>
+       <TouchableOpacity style={{marginBottom:20}}>
         <View style={styles.pdfView}>
           <View style={styles.PdfTxtView}>
             <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>

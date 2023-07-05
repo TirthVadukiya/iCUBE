@@ -70,19 +70,7 @@ const styles = StyleSheet.create({
         color:COLORS.Text,
         fontFamily:"Rajdhani-SemiBold"
       },
-      productView : {
-         backgroundColor:"black",
-         height:"27%",width:"89%",marginLeft:18,borderRadius:20
-      },
-      videoPlayBtn: {
-        backgroundColor: '#EC581F',
-        height: 30,
-        width: 30,
-        borderRadius: 25,
-        left: 280,top:150,
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
+     
       termBtn : {
         height:50,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
         borderRadius:10,alignItems:"center",justifyContent:"center",flexDirection:"row",opacity:5,

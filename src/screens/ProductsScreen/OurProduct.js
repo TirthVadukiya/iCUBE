@@ -64,7 +64,7 @@ const OurProduct = ({navigation}) => {
             <TouchableOpacity style={styles.productView}>
                 <View style={{alignItems:"center",bottom:53,justifyContent:"center"}} >
                     <Image source={require("../../../assets/images/car2.png")} style={styles.productCar2Img}/>
-                    <Text style={styles.productTxt1}>Pit Parking Systems</Text>
+                    <Text style={styles.productTxt2}>Pit Parking Systems</Text>
                 </View>
             </TouchableOpacity>
 
@@ -72,7 +72,7 @@ const OurProduct = ({navigation}) => {
           <TouchableOpacity style={styles.productView}>
                 <View style={{alignItems:"center",bottom:55}} >
                     <Image source={require("../../../assets/images/car3.png")} style={styles.productCar3Img}/>
-                    <Text style={styles.productTxt1}>Rotary Parking Systems</Text>
+                    <Text style={styles.productTxt3}>Rotary Parking Systems</Text>
                 </View>
             </TouchableOpacity>
          </View>
