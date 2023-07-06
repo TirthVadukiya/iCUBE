@@ -23,7 +23,7 @@ function CustomDrawer({props, navigation}) {
         />
         <View style={styles.ProfileTxtView}>
           <Text style={styles.ProfileTxt}>Jainil Bhatt</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("Profile")}>
             <View style={styles.ProfileShowDetail}>
               <Text
                 style={{
@@ -66,7 +66,7 @@ function CustomDrawer({props, navigation}) {
       </View>
 
    
-      <TouchableOpacity style={styles.LogoutBtn}>
+      <TouchableOpacity style={styles.LogoutBtn} onPress={()=> navigation.navigate("Login")}>
         {/* <View style={styles.LogoutBtn}> */}
           <Image
             source={require('../../assets/images/logoutLogo.png')}

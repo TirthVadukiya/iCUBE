@@ -25,13 +25,47 @@ arrowBackBtn: {
     fontFamily: 'Raleway-Bold',
   },
   checkBox : {
-    flexDirection:'row',left:10,marginTop:10
+    flexDirection:'row',left:8,marginTop:10
   },
   checkBoxTxt : {
     fontSize:14,
     fontWeight:"400",
     color:COLORS.text2,lineHeight:21,marginRight:50,
     fontFamily:"Lato-Regular",top:3
+  },
+   UploadImg : {
+    resizeMode:"contain",height:134,width:330,marginLeft:18
+   },
+   viewTextInput: {
+    backgroundColor: '#F0EEEE',
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: COLORS.borderClr,
+    // marginHorizontal:10,
+    height:45,width:335,  
+    margin: 10,left:4
+  },
+  txtInput: {
+    width: '100%',
+    marginLeft:10,
+    fontWeight:"600",
+    fontSize:14,
+    fontFamily:"Lato-SemiBold"
+  },
+  SubmitView : {
+    marginBottom:50,
+     backgroundColor:COLORS.black,
+     height:48,width:335,
+     margin:10,borderRadius:10,left:4,justifyContent:"center"
+  },
+  SubmitTxt : {
+    fontSize:16,
+    fontWeight:"600",
+    color:COLORS.Text,
+    textAlign:"center",
+    fontFamily:"Poppins-SemiBold"
   }
 })
 

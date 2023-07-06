@@ -62,7 +62,7 @@ const Service = ({navigation}) => {
  
       {/* TextInput */}
 
-      <ScrollView style={{marginTop:15}}>
+      <ScrollView style={{marginTop:15}} showsVerticalScrollIndicator={false}>
 
       <View style={styles.viewTextInput}>
         <TextInput
@@ -125,8 +125,8 @@ const Service = ({navigation}) => {
           onChangeText={onChangeNumber}
           value={number}
           placeholder="Phone"
+          keyboardType='numeric'
           placeholderTextColor={'#AEA8B2'}
-          secureTextEntry
         />
       </View>
 

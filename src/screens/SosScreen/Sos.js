@@ -1,4 +1,4 @@
-import { View, Text,Image,ImageBackground,ScrollView,TouchableOpacity } from 'react-native'
+import { View, Text,Image,ImageBackground,ScrollView,TouchableOpacity,TextInput } from 'react-native'
 import React from 'react'
 import styles from '.'
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -13,6 +13,7 @@ const Sos = ({navigation}) => {
   const [checked4, setChecked4] = React.useState(false);
   const [checked5, setChecked5] = React.useState(false);
 
+  const [number, onChangeNumber] = React.useState('');
 
   return (
     <View style={styles.main} >
@@ -56,7 +57,7 @@ const Sos = ({navigation}) => {
 
      {/* CheckBox */}
 
-     <ScrollView>
+     <ScrollView showsHorizontalScrollIndicator={false}>
 
      <View style={styles.checkBox}>
         <Checkbox
@@ -123,6 +124,32 @@ const Sos = ({navigation}) => {
         />
         <Text style={styles.checkBoxTxt}>Borem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
       </View>
+
+     {/* UploadImg */}
+
+      <TouchableOpacity>
+        <Image source={require("../../../assets/images/uploadImg.png")} style={styles.UploadImg}/>
+      </TouchableOpacity>
+
+     {/* TextInput */}
+
+     <View style={styles.viewTextInput}>
+        <TextInput
+          style={styles.txtInput}
+          onChangeText={onChangeNumber}
+          value={number}
+          placeholder="+91- 97582 62353"
+          keyboardType='numeric'
+          placeholderTextColor={'#292929'}
+        />
+      </View>
+
+      {/* SubmitBtn */}
+
+      <TouchableOpacity style={styles.SubmitView}>
+        <Text style={styles.SubmitTxt}>Submit</Text>
+      </TouchableOpacity>
+
       </ScrollView>
 
     </View>

@@ -14,11 +14,12 @@ const styles = StyleSheet.create({
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
+    marginTop:30
   },
   AppLogoImg: {
     bottom: 20,
-    height: 62,
-    width: 235,
+    height: 52,
+    width: 200,
   },
   LoginTxtView: {
     flexDirection: 'column',
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#D6D6D6',
-    marginHorizontal: 25,
+    marginHorizontal: 25,height:45,
     margin: 10,
   },
   txtInput: {
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    marginHorizontal: 30,
+    marginHorizontal: 25,
   },
   LoginTxt: {
     fontSize: 14,
@@ -75,11 +76,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     right: 30,
-  },
-  footerTxtView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    bottom: 20,
   },
   footerTxt1: {
     fontSize: 14,

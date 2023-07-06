@@ -62,7 +62,7 @@ const styles = StyleSheet.create ({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    marginHorizontal: 30,
+    marginHorizontal: 19,
   },
   LoginTxt: {
     fontSize: 14,

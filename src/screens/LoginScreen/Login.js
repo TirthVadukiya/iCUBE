@@ -34,7 +34,7 @@ const Login = ({navigation}) => {
       <View style={{alignItems: 'center'}}>
         <Image
           source={require('../../../assets/images/parking.png')}
-          style={{height: 80, width: 80, bottom: 10}}
+          style={{height: 60, width: 60, bottom: 10}}
         />
       </View>
 
@@ -75,27 +75,14 @@ const Login = ({navigation}) => {
       </TouchableOpacity>
 
       {/* BottomImg */}
-
-      <View style={{ justifyContent: 'flex-end',marginTop:42}}>
-        <ImageBackground
-          source={require('../../../assets/images/footer.png')}
-          style={styles.footerImg}>
-          <View style={styles.footerCarImg}>
-            <Image
-              source={require('../../../assets/images/footerCar.png')}
-              style={{height: 170, width: 160, top: 15}}
-            />
-          </View>
-          <View style={styles.footerTxtView}>
-            <Text style={styles.footerTxt1}>Don’t have an account? </Text>
-            <Text
-              style={styles.footerTxt2}
-              onPress={() => navigation.navigate('Sign')}>
-              Sign Up
-            </Text>
-          </View>
-        </ImageBackground>
+    
+     <ImageBackground source={require("../../../assets/images/footer.png")} style={{height:"52%",width:"100%",marginTop:76}}>
+      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:170}}>
+      <Text style={styles.footerTxt1}>Don’t have an account?</Text>
+      <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
       </View>
+     </ImageBackground>
+     
     </View>
   );
 };
