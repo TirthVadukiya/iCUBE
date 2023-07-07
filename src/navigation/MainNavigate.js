@@ -22,7 +22,7 @@ const MainNavigate = () => {
     <NavigationContainer>
 
    <Stack.Navigator screenOptions={{headerShown:false}}  initialRouteName={SplashScreen}>
-      <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false}}/>
+      {/* <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false}}/> */}
       <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
       <Stack.Screen name='Otp' component={Otp} options={{headerShown:false}}/>
       <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/>

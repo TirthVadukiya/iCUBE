@@ -1,20 +1,19 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   main: {
     flex: 1,
     backgroundColor: 'white',
   },
-  LoginTopImg: {
-    height: 168,
-    width: 430,
-    bottom: 20,
+  TopImage : {
+    height: Dimensions.get("window").height / 5.2,
+    width: Dimensions.get ("window"). width,
   },
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop:30
+    marginTop:165
   },
   AppLogoImg: {
     bottom: 20,
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#D6D6D6',
     marginHorizontal: 25,height:45,
-    margin: 10,
+    margin: 10,marginTop:20
   },
   txtInput: {
     width: '100%',
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    marginHorizontal: 25,
+    marginHorizontal: 25,marginTop:15
   },
   LoginTxt: {
     fontSize: 14,
@@ -66,16 +65,10 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontFamily: 'Raleway-Bold',
   },
-  footerImg: {
-    height: 231,
-    width: 431,
-    right: 30,
-  },
-  footerCarImg: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
-    right: 30,
+  footerImg : {
+    height: Dimensions.get("window").height / 3.9,
+    width: Dimensions.get("window"). width,
+    marginTop:56
   },
   footerTxt1: {
     fontSize: 14,
@@ -89,6 +82,12 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontFamily: 'Raleway-Regular',
   },
+
+  LoginImg : {
+    height:Dimensions.get("window").height / 1,
+    width: Dimensions.get("window").width ,
+   
+  }
 });
 
 export default styles;

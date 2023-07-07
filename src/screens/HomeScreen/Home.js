@@ -23,9 +23,9 @@ const Home = ({navigation}) => {
          
          <View style={{flexDirection:"row",flex:1,justifyContent:'space-evenly',alignItems:"center"}}>
           <TouchableOpacity onPress={()=> navigation.openDrawer()}>
-           {/* <View style={styles.ProfileImg}> */}
+        
             <Image source={require("../../../assets/images/UserImage.png")} style={styles.ProfileImg} />
-           {/* </View> */}
+          
           </TouchableOpacity>
   
         <View>
@@ -47,9 +47,6 @@ const Home = ({navigation}) => {
 
         <SliderBox
           images={images}
-          onCurrentImagePressed={index =>
-            console.warn(`image ${index} pressed`)
-          }
           dotColor="#ff3300"
           inactiveDotColor="white"
           autoplay

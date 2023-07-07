@@ -89,7 +89,7 @@ const Signup = ({navigation}) => {
      <ImageBackground source={require("../../../assets/images/footer.png")} style={{height:200,width:360,top:5}}>
       <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:170}}>
       <Text style={styles.footerTxt1}>Don’t have an account?</Text>
-      <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
+      <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Login")}> Login</Text>
       </View>
      </ImageBackground>
 

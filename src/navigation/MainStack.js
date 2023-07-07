@@ -12,7 +12,6 @@ import Service from '../screens/ServiceScreen/Service';
 const Stack = createNativeStackNavigator();
 
 function MainStack() {
-  console.log(Stack);
   return (
     <Stack.Navigator
       screenOptions={{

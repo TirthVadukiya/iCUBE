@@ -5,6 +5,7 @@ import {
   Image,
   TextInput,
   ImageBackground,
+  Dimensions
 } from 'react-native';
 import React from 'react';
 import styles from '.';
@@ -14,17 +15,8 @@ const Login = ({navigation}) => {
 
   return (
     <View style={styles.main}>
-      {/* LoginTopImg */}
-      <View>
-        <Image
-          source={require('../../../assets/images/Image1.png')}
-          style={styles.LoginTopImg}
-        />
-      </View>
-
-      {/* AppLogo */}
-
-      <View style={styles.AppLogoView}>
+        <ImageBackground resizeMode="stretch" source={require("../../../assets/images/Login.png")} style={styles.LoginImg}>
+        <View style={styles.AppLogoView}>
         <Image
           source={require('../../../assets/images/IcubeLogo.png')}
           style={styles.AppLogoImg}
@@ -74,16 +66,16 @@ const Login = ({navigation}) => {
         </View>
       </TouchableOpacity>
 
-      {/* BottomImg */}
-    
-     <ImageBackground source={require("../../../assets/images/footer.png")} style={{height:"52%",width:"100%",marginTop:76}}>
-      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:170}}>
+      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:250}}>
       <Text style={styles.footerTxt1}>Don’t have an account?</Text>
       <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
       </View>
-     </ImageBackground>
-     
-    </View>
+
+        </ImageBackground>
+
+      </View>
+
+    
   );
 };
 
