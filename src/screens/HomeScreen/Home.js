@@ -32,7 +32,7 @@ const Home = ({navigation}) => {
           <Image source={require('../../../assets/images/IcubeLogo.png')} style={{height:36,width:138}}/>
         </View>
   
-        <View style={{left:10}}>
+        <View style={{left:20}}>
           <Icon name="notifications" size={28} color={"#EC581F"}/>
         </View>
 

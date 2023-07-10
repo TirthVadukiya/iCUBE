@@ -11,14 +11,9 @@ const Signup = ({navigation}) => {
     <View style={styles.main}>
       {/* footerImg */}
 
-      <View>
-        <Image
-          source={require('../../../assets/images/Image1.png')}
-          style={styles.LoginTopImg}
-        />
-      </View>
+      <ImageBackground resizeMode="stretch" source={require("../../../assets/images/Login.png")} style={styles.LoginImg}>
 
-      {/* AppLogo */}
+    {/* AppLogo */}
 
       <View style={styles.AppLogoView}>
         <Image
@@ -27,12 +22,19 @@ const Signup = ({navigation}) => {
         />
       </View>
 
-      {/* SignupTxt */}
+      <View style={{alignItems: 'center'}}>
+        <Image
+          source={require('../../../assets/images/parking.png')}
+          style={{height: 160, width: 160,  }}
+        />
+      </View>
+
+       {/* SignupTxt */}
 
       <View style={styles.signupView}>
         <Text style={styles.signupTxt}>Sing Up</Text>
         <Text style={styles.signupTxt1}>
-          Use your i-cube account to continue
+        Use your i-cube Parking Elevators  account to continue
         </Text>
       </View>
 
@@ -84,15 +86,12 @@ const Signup = ({navigation}) => {
         </View>
       </TouchableOpacity>
 
-     {/* BottomImg */}
-
-     <ImageBackground source={require("../../../assets/images/footer.png")} style={{height:200,width:360,top:5}}>
-      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:170}}>
+      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:15}}>
       <Text style={styles.footerTxt1}>Don’t have an account?</Text>
       <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Login")}> Login</Text>
       </View>
-     </ImageBackground>
 
+      </ImageBackground>
     </View>
   );
 };

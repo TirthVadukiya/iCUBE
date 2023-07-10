@@ -12,6 +12,7 @@ import Otp from '../screens/OtpScreen/Otp';
 import Profile from '../screens/ProfileScreen/Profile';
 import EditProfile from '../screens/EditProfileScreen/EditProfile';
 import Signup from '../screens/SignupScreen/Signup';
+import PRoductInfo from '../screens/ProductInfoScreen/PRoductInfo';
 
 
 const Stack = createNativeStackNavigator();
@@ -29,6 +30,7 @@ const MainNavigate = () => {
       <Stack.Screen name='MainHome' component={DrawerNavigate} />
       <Stack.Screen name='Profile'  component={Profile}/>
       <Stack.Screen name='EditProfile'  component={EditProfile}/>
+      <Stack.Screen name='ProductInfo'  component={PRoductInfo}/>
       
    </Stack.Navigator>
    </NavigationContainer>

@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ProfileImg: {
-    right: 10,
+    right: 20,
     height: 35,
     width: 35,
     borderRadius: 20,

@@ -73,13 +73,13 @@ const Warranty = ({navigation}) => {
 
        <View style={{flexDirection:"row"}}>
         <TouchableOpacity style={styles.termBtn}>
-          <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
+          <Image source={require("../../../assets/images/PdfIcon1.png")} style={{resizeMode:"center",height:30,width:30}}/>
           <Text style={styles.termTxt}>Terms & Conditions</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.termBtn}>
-          <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
-          <Text style={styles.termTxt}>PMS Schedule</Text>
+          <Image source={require("../../../assets/images/PdfIcon1.png")} style={{resizeMode:"center",height:30,width:30}}/>
+          <Text style={styles.termTxt1}>PMS Schedule</Text>
         </TouchableOpacity>
        </View>
  
@@ -87,22 +87,22 @@ const Warranty = ({navigation}) => {
 
        <View style={{flexDirection:"row"}}>
         <View style={styles.serviceBtn}>
-         <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
-          <Text style={styles.serviceTxt}>Last Service Date</Text>
-          <Image source={require("../../../assets/images/Layer.png")} style={{resizeMode:'center'}}/>
+         <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly"}}>
+          <Text  style={styles.serviceTxt}>Last Service Date</Text>
+          <Image source={require("../../../assets/images/Layer.png")} style={{resizeMode:'center',left:20}}/>
          </View>
          <Text style={styles.serviceTxt1}>25 / 08 /2023</Text>
         </View>
 
+        
         <View style={styles.serviceBtn}>
-        <View style={styles.serviceBtn}>
-         <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+         <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly"}}>
           <Text style={styles.serviceTxt}>Upcoming Service Date</Text>
-          <Image source={require("../../../assets/images/Layer.png")} style={{resizeMode:'center'}}/>
+          <Image source={require("../../../assets/images/Layer.png")} style={{resizeMode:'center',left:10}}/>
          </View>
          <Text style={styles.serviceTxt2}>02 to 15 July, 2023</Text>
         </View>
-        </View>
+       
        </View>
 
        {/* Warranty */}

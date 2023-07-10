@@ -12,7 +12,7 @@ const styles = StyleSheet.create ({
 },
 arrowBackBtn: {
     resizeMode: 'center',
-    right: 15,
+    right: 28,
     height: 35,
     width: 35,
     alignItems: 'center',
@@ -22,7 +22,7 @@ arrowBackBtn: {
     fontSize: 22,
     fontWeight: '700',
     color: COLORS.black,
-    fontFamily: 'Raleway-Bold',
+    fontFamily: 'Raleway-Bold',right:8
   },
   viewTextInput: {
     backgroundColor: '#FFF',

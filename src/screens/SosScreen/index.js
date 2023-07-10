@@ -52,7 +52,7 @@ arrowBackBtn: {
     marginLeft:10,
     fontWeight:"600",
     fontSize:14,
-    fontFamily:"Lato-SemiBold"
+    fontFamily:"Raleway-SemiBold"
   },
   SubmitView : {
     marginBottom:50,
@@ -65,7 +65,7 @@ arrowBackBtn: {
     fontWeight:"600",
     color:COLORS.Text,
     textAlign:"center",
-    fontFamily:"Poppins-SemiBold"
+    fontFamily:"Raleway-SemiBold"
   }
 })
 

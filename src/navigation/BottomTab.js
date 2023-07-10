@@ -23,6 +23,7 @@ const BottomTab = () => {
       tabBarActiveTintColor: "#EC581F",
       // tabBarActiveBackgroundColor:"black",
       
+      
       tabBarStyle: {
         height: Platform.OS == 'ios' ? 80 : 65,
         borderTopLeftRadius:20,

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
       },
       arrowBackBtn: {
         resizeMode: 'center',
-        right: 15,
+        right: 35,
         height: 35,
         width: 35,
         alignItems: 'center',
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         color: COLORS.black,
         fontFamily: 'Raleway-Bold',
+        right:8
       },
       WarrantyCardTxt: {
         height: '15%',
@@ -73,12 +74,15 @@ const styles = StyleSheet.create({
      
       termBtn : {
         height:50,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
-        borderRadius:10,alignItems:"center",justifyContent:"center",flexDirection:"row",opacity:5,
+        borderRadius:10,alignItems:"center",justifyContent:"space-evenly",flexDirection:"row",opacity:5,
         shadowColor:"black",shadowOpacity:20
+      },
+      pdfImg : {
+        resizeMode:"center",height:30,width:30
       },
       termTxt : {
         color:COLORS.black,
-        fontWeight:"600",fontSize:10,right:30,
+        fontWeight:"600",fontSize:10,
         fontFamily: "Raleway-SemiBold"
       },
 });

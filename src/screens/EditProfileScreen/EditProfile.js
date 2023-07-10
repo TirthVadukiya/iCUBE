@@ -44,7 +44,7 @@ const EditProfile = ({navigation}) => {
               <Text style={styles.headerBarTxt}>Profile Edit</Text>
             </View>
 
-            <View style={{left: 10}}>
+            <View style={{left: 25}}>
               <Icon name="notifications" size={28} color={'#EC581F'} />
             </View>
           </View>
@@ -69,7 +69,7 @@ const EditProfile = ({navigation}) => {
           value={FirstName}
           placeholder="Name"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -171,7 +171,7 @@ const EditProfile = ({navigation}) => {
       </View>
      
      <TouchableOpacity>
-      <Image source={require("../../../assets/images/PlusBtn.png")} style={{height:45,width:45}}/>
+      <Image source={require("../../../assets/images/MinsBtn.png")} style={{height:45,width:45}}/>
      </TouchableOpacity>
 
       </View>

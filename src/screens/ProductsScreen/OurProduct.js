@@ -40,7 +40,7 @@ const OurProduct = ({navigation}) => {
         
         <ScrollView style={{flex:1,backgroundColor:COLORS.primary}}>
          <View >
-            <TouchableOpacity style={styles.productView}>
+            <TouchableOpacity style={styles.productView} onPress={()=> navigation.navigate("ProductInfo")}>
                 <View style={{alignItems:"center",bottom:55}} >
                     <Image source={require("../../../assets/images/car.png")} style={styles.productImg}/>
                     <Text style={styles.productTxt}>2-Post Parking Systems</Text>

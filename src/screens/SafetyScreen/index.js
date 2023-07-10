@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   arrowBackBtn: {
     resizeMode: 'center',
-    right: 15,
+    right: 25,
     height: 35,
     width: 35,
     alignItems: 'center',
@@ -51,18 +51,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
   },
-  PdfTxtView: {
-    backgroundColor: COLORS.black,
-    height: 48,
-    width: 48,
-    borderRadius: 54,
-    alignItems: 'center',
-    justifyContent: 'center',
+  pdfImg : {
+     resizeMode:"center",
+     height:48,width:48
   },
-  pdfImg: {
-    height: 31,
-    width: 25,
-  },
+ 
   PdfTxt: {
     fontSize: 14,
     fontWeight: '600',

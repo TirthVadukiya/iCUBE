@@ -34,11 +34,11 @@ const Safety = ({navigation}) => {
           <View>
             <Image
               source={require('../../../assets/images/IcubeLogo.png')}
-              style={{height: 36, width: 138}}
+              style={{height: 36, width: 138,right:8}}
             />
           </View>
 
-          <View style={{left: 10}}>
+          <View style={{left: 20}}>
             <Icon name="notifications" size={28} color={'#EC581F'} />
           </View>
         </View>
@@ -90,38 +90,34 @@ const Safety = ({navigation}) => {
 
       {/* pdf View */}
 
-      <TouchableOpacity>
-        <View style={styles.pdfView}>
-          <View style={styles.PdfTxtView}>
-            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
-          </View>
-          <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
-        </View>
-        </TouchableOpacity>
-
        <TouchableOpacity>
         <View style={styles.pdfView}>
-          <View style={styles.PdfTxtView}>
-            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
-          </View>
+         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
+          
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
         </TouchableOpacity>
 
-       <TouchableOpacity>
+        <TouchableOpacity>
         <View style={styles.pdfView}>
-          <View style={styles.PdfTxtView}>
-            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
-          </View>
+         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
+          
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
         </TouchableOpacity>
 
-       <TouchableOpacity style={{marginBottom:20}}>
+        <TouchableOpacity>
         <View style={styles.pdfView}>
-          <View style={styles.PdfTxtView}>
-            <Image source={require('../../../assets/images/pdf.png')} style={styles.pdfImg}/>
-          </View>
+         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
+          
+          <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
+        </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{marginBottom:20}}>
+        <View style={styles.pdfView}>
+         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
+          
           <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
         </View>
         </TouchableOpacity>

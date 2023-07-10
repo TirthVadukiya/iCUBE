@@ -30,7 +30,7 @@ const Product = ({navigation}) => {
            <Text style={styles.headerBarTxt}>My Product</Text>
           </View>
 
-          <View style={{left: 10}}>
+          <View style={{left: 25}}>
             <Icon name="notifications" size={28} color={'#EC581F'} />
           </View>
         </View>
@@ -75,24 +75,24 @@ const Product = ({navigation}) => {
 
         <View style={{flexDirection:"row"}}>
         <TouchableOpacity style={styles.termBtn}>
-          <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
+          <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
           <Text style={styles.termTxt}>Terms & Conditions</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.termBtn}>
-          <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
+        <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
           <Text style={styles.termTxt}>PMS Schedule</Text>
         </TouchableOpacity>
        </View>
 
        <View style={{flexDirection:"row",marginBottom:20}}>
         <TouchableOpacity style={styles.termBtn}>
-          <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
+        <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
           <Text style={styles.termTxt}>Terms & Conditions</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.termBtn}>
-          <Image source={require("../../../assets/images/pdfIcon.png")} style={{resizeMode:"center"}}/>
+        <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
           <Text style={styles.termTxt}>PMS Schedule</Text>
         </TouchableOpacity>
        </View>

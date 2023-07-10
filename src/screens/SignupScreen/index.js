@@ -1,24 +1,26 @@
 import React from "react";
-import { StyleSheet} from "react-native";
+import { StyleSheet,Dimensions} from "react-native";
+import COLORS from "../../../assets/colors/colors";
 
 const styles = StyleSheet.create ({
    main : {
     flex:1,
     backgroundColor:'white'
    },
-   LoginTopImg: {
-    height: 168,
-    width: 430,
-    bottom: 20,
+   LoginImg : {
+    height:Dimensions.get("window").height / 1,
+    width: Dimensions.get("window").width ,
   },
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
+    marginTop:150,
+    margin:15
   },
   AppLogoImg: {
-    bottom: 20,
-    height: 62,
-    width: 235,
+    
+    height: 52,
+    width: 200,
   },
   signupView : {
     flexDirection:"column",alignItems:"center"
@@ -46,6 +48,9 @@ const styles = StyleSheet.create ({
     width: '100%',
     padding: 10,
     color: 'black',
+    fontSize:14,
+    fontWeight:"400",
+    fontFamily:'Raleway-Regular'
   },
   viewTextInputAddress: {
     backgroundColor: '#FFF',
@@ -64,39 +69,23 @@ const styles = StyleSheet.create ({
     borderRadius: 10,
     marginHorizontal: 19,
   },
-  LoginTxt: {
-    fontSize: 14,
-    color: '#FFF',
-    fontWeight: '700',
-    fontFamily: 'Raleway-Bold',
-  },
-  footerImg: {
-    height: 210,
-    width: 390,
-    top:22,
-    right:20
-  },
-  footerCarImg: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
-    resizeMode:"contain"
-  },
-  footerTxtView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    bottom: 50,
+  LoginTxt : {
+   fontSize:14,
+   fontWeight:"400",
+   color: COLORS.primary,
+   fontFamily:'Raleway-Regular'
   },
   footerTxt1: {
     fontSize: 14,
     fontWeight: '400',
-    color: '#FFF',
+    color: COLORS.black,
     fontFamily: 'Raleway-Regular',
+  
   },
   footerTxt2: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#FFF',
+    color: COLORS.black,
     fontFamily: 'Raleway-Regular',
   },
 })

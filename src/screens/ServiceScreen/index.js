@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
       ServiceBtnTxt : {
         fontSize:16,
         fontWeight:"600",
-        fontFamily:"Poppins-SemiBold",
+        fontFamily:"Raleway-SemiBold",
         color:COLORS.primary,
         textAlign:"center"
       }

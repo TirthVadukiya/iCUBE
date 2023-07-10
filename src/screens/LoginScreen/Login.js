@@ -26,7 +26,7 @@ const Login = ({navigation}) => {
       <View style={{alignItems: 'center'}}>
         <Image
           source={require('../../../assets/images/parking.png')}
-          style={{height: 60, width: 60, bottom: 10}}
+          style={{height: 160, width: 160,  }}
         />
       </View>
 
@@ -35,7 +35,7 @@ const Login = ({navigation}) => {
       <View style={styles.LoginTxtView}>
         <Text style={styles.LoginTxt1}>Log In</Text>
         <Text style={styles.LoginTxt2}>
-          Use your Diesel Sports account to continue
+        Use your i-cube Parking Elevators account to continue
         </Text>
       </View>
 
@@ -66,7 +66,7 @@ const Login = ({navigation}) => {
         </View>
       </TouchableOpacity>
 
-      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end",top:250}}>
+      <View style={{flexDirection:"row",justifyContent:"center",marginTop:90}}>
       <Text style={styles.footerTxt1}>Don’t have an account?</Text>
       <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
       </View>

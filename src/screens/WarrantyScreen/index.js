@@ -84,24 +84,28 @@ const styles = StyleSheet.create({
   },
   termBtn : {
     height:50,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
-    borderRadius:10,alignItems:"center",justifyContent:"center",flexDirection:"row",opacity:5,
-    shadowColor:"black",shadowOpacity:20
+    borderRadius:10,flexDirection:"row",alignItems:"center",justifyContent:"space-between",padding:10
   },
   termTxt : {
     color:COLORS.black,
-    fontWeight:"600",fontSize:10,right:30,
+    fontWeight:"600",fontSize:10,right:15,
+    fontFamily: "Raleway-SemiBold"
+  },
+  termTxt1 : {
+    color:COLORS.black,
+    fontWeight:"600",fontSize:10,right:32,
     fontFamily: "Raleway-SemiBold"
   },
   serviceBtn : {
     height:65,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
-    borderRadius:10,alignItems:"center",justifyContent:"center",opacity:5,
-    shadowColor:"black",shadowOpacity:20 
+    borderRadius:10,alignItems:"center",justifyContent:"center",
   },
   serviceTxt : {
     fontSize:10,
     color:COLORS.bgColor,
     fontWeight:"400",
-    fontFamily: "Raleway-Regular",left:12
+    fontFamily: "Raleway-Regular",
+    left:15
   },
   serviceTxt1 : {
     fontSize:16,
@@ -113,7 +117,7 @@ const styles = StyleSheet.create({
     fontSize:16,
     color:COLORS.black,
     fontWeight:"400",
-    fontFamily: "Rajdhani-SemiBold",bottom:20,right:14
+    fontFamily: "Rajdhani-SemiBold",bottom:20,right:8
   },
   WarrantyCardTxt1: {
     color: COLORS.black,

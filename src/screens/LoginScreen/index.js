@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet,Dimensions} from 'react-native';
+import COLORS from '../../../assets/colors/colors';
 
 const styles = StyleSheet.create({
   main: {
@@ -13,12 +14,13 @@ const styles = StyleSheet.create({
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop:165
+    marginTop:165,
+    margin:15
   },
   AppLogoImg: {
-    bottom: 20,
-    height: 52,
-    width: 200,
+    
+    height: Dimensions.get("window"). height / 12.6,
+    width: Dimensions.get("window").width / 1.6,
   },
   LoginTxtView: {
     flexDirection: 'column',
@@ -65,21 +67,17 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontFamily: 'Raleway-Bold',
   },
-  footerImg : {
-    height: Dimensions.get("window").height / 3.9,
-    width: Dimensions.get("window"). width,
-    marginTop:56
-  },
+ 
   footerTxt1: {
     fontSize: 14,
     fontWeight: '400',
-    color: '#FFF',
+    color: COLORS.black,
     fontFamily: 'Raleway-Regular',
   },
   footerTxt2: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#FFF',
+    color: COLORS.black,
     fontFamily: 'Raleway-Regular',
   },
 
