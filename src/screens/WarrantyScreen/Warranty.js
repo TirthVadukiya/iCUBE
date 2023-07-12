@@ -88,8 +88,8 @@ const Warranty = ({navigation}) => {
        <View style={{flexDirection:"row"}}>
         <View style={styles.serviceBtn}>
          <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly"}}>
-          <Text  style={styles.serviceTxt}>Last Service Date</Text>
-          <Image source={require("../../../assets/images/Layer.png")} style={{resizeMode:'center',left:20}}/>
+          <Text  style={styles.serviceImgTxt}>Last Service Date</Text>
+          <Image source={require("../../../assets/images/Layer.png")} style={styles.serviceDateImg}/>
          </View>
          <Text style={styles.serviceTxt1}>25 / 08 /2023</Text>
         </View>
@@ -98,7 +98,7 @@ const Warranty = ({navigation}) => {
         <View style={styles.serviceBtn}>
          <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly"}}>
           <Text style={styles.serviceTxt}>Upcoming Service Date</Text>
-          <Image source={require("../../../assets/images/Layer.png")} style={{resizeMode:'center',left:10}}/>
+          <Image source={require("../../../assets/images/Layer.png")} style={styles.serviceDateImg}/>
          </View>
          <Text style={styles.serviceTxt2}>02 to 15 July, 2023</Text>
         </View>

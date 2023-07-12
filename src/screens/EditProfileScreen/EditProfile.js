@@ -81,7 +81,7 @@ const EditProfile = ({navigation}) => {
           keyboardType="numeric"
           placeholder="Mobile"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -93,6 +93,7 @@ const EditProfile = ({navigation}) => {
           placeholder="Email"
           keyboardType="email-address"
           placeholderTextColor={'#AEA8B2'}
+          cursorColor={"black"}
         />
       </View>
 
@@ -104,7 +105,7 @@ const EditProfile = ({navigation}) => {
           value={City}
           placeholder="City"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -116,7 +117,7 @@ const EditProfile = ({navigation}) => {
           placeholder="380008"
           keyboardType="numeric"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -129,6 +130,7 @@ const EditProfile = ({navigation}) => {
           value={Address}
           placeholder="Address"
           placeholderTextColor={'#AEA8B2'}
+          cursorColor={"black"}
         />
       </View>
 
@@ -139,6 +141,7 @@ const EditProfile = ({navigation}) => {
           value={Occupation}
           placeholder="Occupation"
           placeholderTextColor={'#AEA8B2'}
+          cursorColor={"black"}
         />
       </View>
 
@@ -150,6 +153,7 @@ const EditProfile = ({navigation}) => {
           value={OwnCar1}
           placeholder="Own car 1"
           placeholderTextColor={'#AEA8B2'}
+          cursorColor={"black"}
           />
       </View>
      
@@ -167,6 +171,7 @@ const EditProfile = ({navigation}) => {
           value={OwnCar2}
           placeholder="Own car 2"
           placeholderTextColor={'#AEA8B2'}
+          cursorColor={"black"}
           />
       </View>
      

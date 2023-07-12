@@ -71,7 +71,7 @@ const Service = ({navigation}) => {
           value={FirstName}
           placeholder="First Name"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -82,7 +82,7 @@ const Service = ({navigation}) => {
           value={LastName}
           placeholder="Last Name"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -93,7 +93,7 @@ const Service = ({navigation}) => {
           value={Company}
           placeholder="Company"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -104,7 +104,7 @@ const Service = ({navigation}) => {
           value={Designation}
           placeholder="Designation"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -115,7 +115,7 @@ const Service = ({navigation}) => {
           value={Email}
           placeholder="Email"
           placeholderTextColor={'#AEA8B2'}
-          
+          cursorColor={"black"}
         />
       </View>
 
@@ -127,6 +127,7 @@ const Service = ({navigation}) => {
           placeholder="Phone"
           keyboardType='numeric'
           placeholderTextColor={'#AEA8B2'}
+          cursorColor={"black"}
         />
       </View>
 
@@ -137,7 +138,7 @@ const Service = ({navigation}) => {
           value={Message}
           placeholder="Message"
           placeholderTextColor={'#AEA8B2'}
-         
+          cursorColor={"black"}
         />
       </View>
 

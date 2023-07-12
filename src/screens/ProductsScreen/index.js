@@ -15,7 +15,7 @@ const styles = StyleSheet.create ({
   },
   arrowBackBtn: {
     resizeMode: 'center',
-    right: 15,
+    right: 25,
     height: 35,
     width: 35,
     alignItems: 'center',
@@ -33,8 +33,9 @@ const styles = StyleSheet.create ({
     width:"85%",borderRadius:18,flexDirection:"column",alignItems:"center",marginTop:70,marginLeft:26
   },
   productImg : {
-    resizeMode:"contain",
-    
+    resizeMode:"center",
+    height:136,
+    width: 181
   },
   productTxt : {
     color: COLORS.Text,

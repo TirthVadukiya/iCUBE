@@ -29,6 +29,7 @@ const Sos = ({navigation}) => {
               justifyContent: 'space-evenly',
               alignItems: 'center',
               marginTop: 15,
+              
             }}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <View style={styles.ProfileImg}>
@@ -121,6 +122,7 @@ const Sos = ({navigation}) => {
             setChecked5(!checked5);
           }}
           color={'#EC581F'}
+          
         />
         <Text style={styles.checkBoxTxt}>Borem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
       </View>
@@ -141,6 +143,7 @@ const Sos = ({navigation}) => {
           placeholder="+91- 97582 62353"
           keyboardType='numeric'
           placeholderTextColor={'#292929'}
+          cursorColor={"black"}
         />
       </View>
 

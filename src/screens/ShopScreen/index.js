@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   arrowBackBtn: {
     resizeMode: 'center',
-    right: 22,
+    right: 35,
     height: 35,
     width: 35,
     alignItems: 'center',

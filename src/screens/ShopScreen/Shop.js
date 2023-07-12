@@ -31,7 +31,7 @@ const Shop = ({navigation}) => {
            <Text style={styles.headerBarTxt}>My Shop</Text>
           </View>
 
-          <View style={{left: 12}}>
+          <View style={{left: 30}}>
             <Icon name="notifications" size={28} color={'#EC581F'} />
           </View>
         </View>
@@ -40,7 +40,7 @@ const Shop = ({navigation}) => {
 
      {/* ShopCard */}
      
-     <ScrollView style={{flex:1,backgroundColor:"#FFF"}} showsVerticalScrollIndicator={false}>
+     <ScrollView style={{flex:1,}} showsVerticalScrollIndicator={false}>
      <View style={{flexDirection:"row"}}>
         <View style={styles.ShopCard}>
             <Image source={require("../../../assets/images/Elevator.png")} style={styles.ShopImg}/>

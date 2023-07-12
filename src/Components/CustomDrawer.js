@@ -44,7 +44,7 @@ function CustomDrawer({props, navigation}) {
       {/* DrawerTabScreen */}
 
       <View style={{padding: 18, flex: 1}}>
-        <TouchableOpacity style={{marginBottom: 10}}>
+        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Demo")}>
           <Text style={styles.DrawerTxt}>Our Product</Text>
         </TouchableOpacity>
 
@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     right: 25,
-    fontFamily: 'Lato-Bold',
+    fontFamily: 'Raleway-SemiBold',
+    top:5
   },
   ProfileShowDetail: {
     backgroundColor: '#EC581F',
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
   DrawerTxt: {
     color: '#EC581F',
     fontWeight: '600',
-    fontFamily: 'Raleway-Medium',
+    fontFamily: 'Raleway-Medium',marginTop:10
   },
   logoutBtnTxt: {
     color: '#FFF',

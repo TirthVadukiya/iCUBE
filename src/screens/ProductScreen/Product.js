@@ -65,7 +65,7 @@ const Product = ({navigation}) => {
 
       {/* product Video */}
         
-      <ImageBackground source={require("../../../assets/images/carpark.png")} style={{height:180,width:330,left:12,borderRadius:20,overflow:"hidden"}}>
+      <ImageBackground source={require("../../../assets/images/carpark.png")} style={{height:180,width:325,left:18,borderRadius:20,overflow:"hidden"}}>
           <TouchableOpacity style={{marginTop:140,width:27,marginLeft:280}}>
             <Image source={require("../../../assets/images/VideoIcon.png")} style={{resizeMode:"contain",height:27,width:27}}/>
           </TouchableOpacity>

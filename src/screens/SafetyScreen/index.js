@@ -21,6 +21,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  headerTxt : {
+    fontSize:22,
+    color:COLORS.black,
+    fontWeight:"700",
+    fontFamily:'Raleway-Bold'
+  },
   videoPlayBtn: {
     backgroundColor: '#EC581F',
     height: 30,
@@ -53,13 +59,17 @@ const styles = StyleSheet.create({
   },
   pdfImg : {
      resizeMode:"center",
-     height:48,width:48
+     height:48,width:48,right:10
   },
  
   PdfTxt: {
     fontSize: 14,
     fontWeight: '600',
     color: COLORS.black,
+    fontFamily: "Raleway-SemiBold",
+    right:10,
+    textAlign:"center",
+    
   },
 });
 

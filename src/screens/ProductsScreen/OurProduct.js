@@ -30,7 +30,7 @@ const OurProduct = ({navigation}) => {
              <Text style={styles.headerTxt}>Our Product</Text>
           </View>
 
-          <View style={{left: 10}}>
+          <View style={{left: 20}}>
             <Icon name="notifications" size={28} color={'#EC581F'} />
           </View>
         </View>

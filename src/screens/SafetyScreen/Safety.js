@@ -32,10 +32,7 @@ const Safety = ({navigation}) => {
           </TouchableOpacity>
 
           <View>
-            <Image
-              source={require('../../../assets/images/IcubeLogo.png')}
-              style={{height: 36, width: 138,}}
-            />
+             <Text style={styles.headerTxt}>Safety Manual</Text>
           </View>
 
           <View style={{left: 20}}>

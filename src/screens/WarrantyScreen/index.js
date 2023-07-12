@@ -100,24 +100,34 @@ const styles = StyleSheet.create({
     height:65,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
     borderRadius:10,alignItems:"center",justifyContent:"center",
   },
+  serviceDateImg : {
+    resizeMode:'center',left:10,height:19,width:21
+  },
   serviceTxt : {
     fontSize:10,
     color:COLORS.bgColor,
     fontWeight:"400",
-    fontFamily: "Raleway-Regular",
-    left:15
+    fontFamily: "Raleway-Regular",right:10
+    
+  },
+  serviceImgTxt : {
+    fontSize:10,
+    color:COLORS.bgColor,
+    fontWeight:"400",
+    fontFamily: "Raleway-Regular",right:20
+    
   },
   serviceTxt1 : {
     fontSize:16,
     color:COLORS.black,
     fontWeight:"400",
-    fontFamily: "Rajdhani-SemiBold",bottom:20,right:22
+    fontFamily: "Rajdhani-SemiBold",right:22
   },
   serviceTxt2 : {
     fontSize:16,
     color:COLORS.black,
     fontWeight:"400",
-    fontFamily: "Rajdhani-SemiBold",bottom:20,right:8
+    fontFamily: "Rajdhani-SemiBold",right:8
   },
   WarrantyCardTxt1: {
     color: COLORS.black,

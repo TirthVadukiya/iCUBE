@@ -26,7 +26,7 @@ const Home = ({navigation}) => {
           </TouchableOpacity>
   
         <View>
-          <Image source={require('../../../assets/images/IcubeLogo.png')} style={{height:36,width:138}}/>
+          <Image source={require('../../../assets/images/IcubeLogo.png')} style={{height:36,width:137}}/>
         </View>
   
         <View style={{left:20}}>
@@ -49,13 +49,11 @@ const Home = ({navigation}) => {
           autoplay
           circleLoop
           resizeMode={'cover'}
-          paginationBoxStyle={{
-            paddingVertical: 10,
-          }}
+        
           dotStyle={{
-            width: 18,
+            width: 20,
             height: 4,
-            borderRadius: 0,
+            borderRadius: 5,
             marginHorizontal: 0,
             left: 85,
             backgroundColor: '#FFFFFF',

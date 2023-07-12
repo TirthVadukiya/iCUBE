@@ -55,7 +55,7 @@ arrowBackBtn: {
     fontFamily:"Raleway-SemiBold"
   },
   SubmitView : {
-    marginBottom:50,
+    marginBottom:38,
      backgroundColor:COLORS.black,
      height:48,width:328,
      margin:10,borderRadius:10,left:4,justifyContent:"center"
