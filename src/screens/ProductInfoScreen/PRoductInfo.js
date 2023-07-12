@@ -42,7 +42,7 @@ const PRoductInfo = ({navigation}) => {
 
       {/* ProductInfo */}
 
-      <ScrollView style={{flex: 1, backgroundColor: COLORS.primary}}>
+      <ScrollView style={{flex: 1, backgroundColor: COLORS.primary}} showsVerticalScrollIndicator={false}>
         <View style={styles.productView}>
           <View style={{alignItems: 'center', bottom: 55}}>
             <Image

@@ -57,7 +57,7 @@ const Sos = ({navigation}) => {
 
      {/* CheckBox */}
 
-     <ScrollView showsHorizontalScrollIndicator={false}>
+     <ScrollView showsVerticalScrollIndicator={false}>
 
      <View style={styles.checkBox}>
         <Checkbox

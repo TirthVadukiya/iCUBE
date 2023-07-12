@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
     arrowBackBtn: {
         resizeMode: 'center',
-        right: 15,
+        right: 28,
         height: 35,
         width: 35,
         alignItems: 'center',
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: COLORS.borderClr,
+        borderColor: COLORS.borderClr1,
         marginHorizontal: 25,
         margin: 10,
       },

@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Raleway-Bold',right:5
   },
   ShopCard : {
-    height:160,width:160,backgroundColor:COLORS.primary,
+    height:170,width:160,backgroundColor:COLORS.primary,
     margin:10,borderRadius:18,marginTop:50,alignItems:"center"
   },
   ShopImg : {

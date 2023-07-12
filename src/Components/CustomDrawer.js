@@ -14,7 +14,7 @@ import {
 
 function CustomDrawer({props, navigation}) {
   return (
-    <DrawerContentScrollView style={{backgroundColor: '#F5F5F5'}} {...props}>
+    <DrawerContentScrollView style={{backgroundColor: '#F5F5F5'}} {...props} showsVerticalScrollIndicator={false}>
       {/* Profile Detail */}
       <View style={{left: 20, marginTop: 20}}>
         <Image

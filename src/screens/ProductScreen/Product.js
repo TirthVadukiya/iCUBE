@@ -38,7 +38,7 @@ const Product = ({navigation}) => {
 
       {/* productView */}
 
-      <ScrollView style={{flex:1}}>
+      <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false}>
 
       <View style={{marginTop:30}}>
        <ImageBackground source={require("../../../assets/images/Subtract.png")} style={{height:180,width:350,left:5}}>

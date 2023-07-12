@@ -1,5 +1,5 @@
 import React from 'react';
-import { createDrawerNavigator,DrawerItem, DrawerContentScrollView} from '@react-navigation/drawer';
+import { createDrawerNavigator,DrawerItem,} from '@react-navigation/drawer';
 import Safety from '../screens/SafetyScreen/Safety';
 import BottomTab from './BottomTab';
 import Product from '../screens/ProductScreen/Product';

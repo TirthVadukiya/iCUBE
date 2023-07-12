@@ -40,7 +40,7 @@ const Shop = ({navigation}) => {
 
      {/* ShopCard */}
      
-     <ScrollView style={{flex:1,}}>
+     <ScrollView style={{flex:1,backgroundColor:"#FFF"}} showsVerticalScrollIndicator={false}>
      <View style={{flexDirection:"row"}}>
         <View style={styles.ShopCard}>
             <Image source={require("../../../assets/images/Elevator.png")} style={styles.ShopImg}/>
@@ -113,7 +113,7 @@ const Shop = ({navigation}) => {
         </View>
      </View>
 
-     <View style={{flexDirection:"row"}}>
+     <View style={{flexDirection:"row",marginBottom:10}}>
         <View style={styles.ShopCard}>
             <Image source={require("../../../assets/images/Elevator.png")} style={styles.ShopImg}/>
             <View style={{bottom:40}}>

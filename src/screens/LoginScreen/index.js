@@ -7,24 +7,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  TopImage : {
-    height: Dimensions.get("window").height / 5.2,
-    width: Dimensions.get ("window"). width,
-  },
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop:165,
-    margin:15
+    margin:15,
   },
   AppLogoImg: {
     
-    height: Dimensions.get("window"). height / 12.6,
-    width: Dimensions.get("window").width / 1.6,
+    height: 54,
+    width: 200,
   },
   LoginTxtView: {
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center',top:50
   },
   LoginTxt1: {
     color: '#EC581F',
@@ -45,12 +40,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#D6D6D6',
     marginHorizontal: 25,height:45,
-    margin: 10,marginTop:20
+    margin: 10,marginTop:80
   },
   txtInput: {
     width: '100%',
     padding: 10,
     color: 'black',
+    fontSize: 14,
+    fontWeight: "400",
+    fontFamily: "Raleway-Regular"
   },
   LoginBtn: {
     backgroundColor: '#EC581F',
@@ -79,11 +77,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: COLORS.black,
     fontFamily: 'Raleway-Regular',
+   
   },
 
   LoginImg : {
-    height:Dimensions.get("window").height / 1,
-    width: Dimensions.get("window").width ,
+    height: 110,
+    width:  "100%",
    
   }
 });

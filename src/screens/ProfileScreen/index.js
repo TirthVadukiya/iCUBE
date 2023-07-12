@@ -12,7 +12,7 @@ const styles = StyleSheet.create ({
 },
 arrowBackBtn: {
     resizeMode: 'center',
-    right: 15,
+    right: 35,
     height: 35,
     width: 35,
     alignItems: 'center',
@@ -36,7 +36,7 @@ arrowBackBtn: {
      borderColor:"#EFEFEF",borderWidth:1,borderRadius:5
   },
   ProfileInfo : {
-    height:40,width:330,backgroundColor:COLORS.black,borderRadius:5,
+    height:40,width:328,backgroundColor:COLORS.black,borderRadius:5,
     flexDirection:"row",alignItems:"center",justifyContent:"space-between",
   },
   profileInfoTxt : {

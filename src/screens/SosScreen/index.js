@@ -30,11 +30,11 @@ arrowBackBtn: {
   checkBoxTxt : {
     fontSize:14,
     fontWeight:"400",
-    color:COLORS.text2,lineHeight:21,marginRight:50,
+    color:COLORS.text2,lineHeight:21,marginRight:60,
     fontFamily:"Lato-Regular",top:3
   },
    UploadImg : {
-    resizeMode:"contain",height:134,width:330,marginLeft:18
+    resizeMode:"contain",height:134,width:322,marginLeft:18
    },
    viewTextInput: {
     backgroundColor: '#F0EEEE',
@@ -44,7 +44,7 @@ arrowBackBtn: {
     borderWidth: 1,
     borderColor: COLORS.borderClr,
     // marginHorizontal:10,
-    height:45,width:335,  
+    height:45,width:328,  
     margin: 10,left:4
   },
   txtInput: {
@@ -57,7 +57,7 @@ arrowBackBtn: {
   SubmitView : {
     marginBottom:50,
      backgroundColor:COLORS.black,
-     height:48,width:335,
+     height:48,width:328,
      margin:10,borderRadius:10,left:4,justifyContent:"center"
   },
   SubmitTxt : {

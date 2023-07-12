@@ -7,23 +7,22 @@ const styles = StyleSheet.create ({
     flex:1,
     backgroundColor:'white'
    },
-   LoginImg : {
-    height:Dimensions.get("window").height / 1,
-    width: Dimensions.get("window").width ,
+   SignImg : {
+    height: 110,
+    width:  "100%",  
   },
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop:150,
     margin:15
   },
   AppLogoImg: {
     
-    height: 52,
+    height: 54,
     width: 200,
   },
   signupView : {
-    flexDirection:"column",alignItems:"center"
+    flexDirection:"column",alignItems:"center",top:25
   },
   signupTxt : {
      color:"#EC581F",

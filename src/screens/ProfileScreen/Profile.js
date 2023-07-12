@@ -31,10 +31,10 @@ const Profile = ({navigation}) => {
             </TouchableOpacity>
 
             <View>
-              <Text style={styles.headerBarTxt}>Book Service</Text>
+              <Text style={styles.headerBarTxt}>My Profile</Text>
             </View>
 
-            <View style={{left: 10}}>
+            <View style={{left: 32}}>
               <Icon name="notifications" size={28} color={'#EC581F'} />
             </View>
           </View>

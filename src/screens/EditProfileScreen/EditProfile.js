@@ -61,7 +61,7 @@ const EditProfile = ({navigation}) => {
 
    {/* TextInput */}
 
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
     <View style={styles.viewTextInput}>
         <TextInput
           style={styles.txtInput}

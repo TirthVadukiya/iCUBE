@@ -38,7 +38,7 @@ const OurProduct = ({navigation}) => {
 
        {/* Our Product */}
         
-        <ScrollView style={{flex:1,backgroundColor:COLORS.primary}}>
+        <ScrollView style={{flex:1,backgroundColor:COLORS.primary}} showsVerticalScrollIndicator={false}>
          <View >
             <TouchableOpacity style={styles.productView} onPress={()=> navigation.navigate("ProductInfo")}>
                 <View style={{alignItems:"center",bottom:55}} >

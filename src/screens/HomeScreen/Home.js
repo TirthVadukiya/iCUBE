@@ -1,20 +1,17 @@
-import {View, Text, TouchableOpacity, Image,ScrollView} from 'react-native';
-import React, {useState} from 'react';
+import {View, Text, TouchableOpacity, Image,ScrollView} from 'react-native'
+import React from 'react'
 import styles from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {SliderBox} from 'react-native-image-slider-box';
 import COLORS from '../../../assets/colors/colors';
 
-
 const images = [
-  'https://source.unsplash.com/1024x768/?nature',
-  'https://source.unsplash.com/1024x768/?water',
-  'https://source.unsplash.com/1024x768/?girl',
+  URL = require("../../../assets/images/Slider1.png"),
+  URL = require("../../../assets/images/Slider2.png"),
+  URL = require("../../../assets/images/Slider3.png"),
 ];
 
 const Home = ({navigation}) => {
- 
-
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       {/* header bar */}
@@ -40,15 +37,15 @@ const Home = ({navigation}) => {
       </View>
 
      
-     <ScrollView  style={{backgroundColor:COLORS.primary}}>
+     <ScrollView  style={{backgroundColor:COLORS.primary}} showsVerticalScrollIndicator={false}>
     
          {/* slider Image */}
    
 
         <SliderBox
           images={images}
-          dotColor="#ff3300"
-          inactiveDotColor="white"
+          dotColor="#EC581F"
+          inactiveDotColor="#FFFFFF"
           autoplay
           circleLoop
           resizeMode={'cover'}
@@ -60,8 +57,8 @@ const Home = ({navigation}) => {
             height: 4,
             borderRadius: 0,
             marginHorizontal: 0,
-            left: 80,
-            backgroundColor: 'rgba(128, 128, 128, 0.92)',
+            left: 85,
+            backgroundColor: '#FFFFFF',
           }}
           ImageComponentStyle={{
             borderRadius: 10,
@@ -86,7 +83,7 @@ const Home = ({navigation}) => {
         <View style={{flexDirection:"row",margin:18,justifyContent:"space-evenly",bottom:20}}>
           <TouchableOpacity style={styles.cardMainView} onPress={()=> navigation.navigate("Warranty")}>
             <View style={styles.cardView}>
-              <Image source={require("../../../assets/images/setting.png")} style={styles.cardViewImg}/ >
+              <Image source={require("../../../assets/images/setting.png")} style={styles.cardViewImg}/>
             </View>
             <Text style={styles.cardTxt}>Warranty & Maintenance</Text>
           </TouchableOpacity>
@@ -102,7 +99,7 @@ const Home = ({navigation}) => {
         <View style={{flexDirection:"row",margin:18,justifyContent:"space-evenly",bottom:40}}>
           <TouchableOpacity style={styles.cardMainView} onPress={()=> navigation.navigate("Service")}>
             <View style={styles.cardView}>
-              <Image source={require("../../../assets/images/service.png")} style={styles.cardViewImg}/ >
+              <Image source={require("../../../assets/images/service.png")} style={styles.cardViewImg} />
             </View>
             <Text style={styles.cardTxt}>Book Service</Text>
           </TouchableOpacity>
@@ -119,7 +116,7 @@ const Home = ({navigation}) => {
      
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -5,7 +5,7 @@ import {
   Image,
   TextInput,
   ImageBackground,
-  Dimensions
+  Dimensions,ScrollView
 } from 'react-native';
 import React from 'react';
 import styles from '.';
@@ -15,7 +15,11 @@ const Login = ({navigation}) => {
 
   return (
     <View style={styles.main}>
-        <ImageBackground resizeMode="stretch" source={require("../../../assets/images/Login.png")} style={styles.LoginImg}>
+        <View>
+          <Image source={require("../../../assets/images/Image.png")} style={styles.LoginImg}/>
+        </View>
+
+       <ScrollView style={{flex:1,}} showsVerticalScrollIndicator={false}>
         <View style={styles.AppLogoView}>
         <Image
           source={require('../../../assets/images/IcubeLogo.png')}
@@ -23,10 +27,10 @@ const Login = ({navigation}) => {
         />
       </View>
 
-      <View style={{alignItems: 'center'}}>
+      <View style={{alignItems: 'center',top:30}}>
         <Image
           source={require('../../../assets/images/parking.png')}
-          style={{height: 160, width: 160,  }}
+          style={{height: 140, width: 140,  }}
         />
       </View>
 
@@ -50,7 +54,6 @@ const Login = ({navigation}) => {
           maxLength={10}
           keyboardType="numeric"
           placeholderTextColor={'#AEA8B2'}
-          secureTextEntry
         />
       </View>
 
@@ -66,16 +69,12 @@ const Login = ({navigation}) => {
         </View>
       </TouchableOpacity>
 
-      <View style={{flexDirection:"row",justifyContent:"center",marginTop:90}}>
+      <View style={{flexDirection:"row",justifyContent:"center",marginTop:60,marginBottom:10}}>
       <Text style={styles.footerTxt1}>Don’t have an account?</Text>
       <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
       </View>
-
-        </ImageBackground>
-
+      </ScrollView>
       </View>
-
-    
   );
 };
 

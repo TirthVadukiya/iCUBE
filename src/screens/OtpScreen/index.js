@@ -6,19 +6,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor:"#FFF",
   },
-  SignUpTopImg: {
-    height: 168,
-    width: 430,
-    bottom: 20,
+  OtpTopImg : {
+    height: 110,
+    width:  "100%",  
   },
   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
   },
   AppLogoImg: {
-    bottom: 20,
-    height: 61,
-    width: 235,top:5
+    height: 54,
+    width: 200,top:20
   },
   OtpVerificationTxt : {
     fontSize:25,

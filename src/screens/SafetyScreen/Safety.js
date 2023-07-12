@@ -23,18 +23,18 @@ const Safety = ({navigation}) => {
             alignItems: 'center',
           }}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            {/* <View style={styles.ProfileImg}> */}
+            
             <Image
               source={require('../../../assets/images/arrowBack.png')}
               style={styles.arrowBackBtn}
             />
-            {/* </View> */}
+            
           </TouchableOpacity>
 
           <View>
             <Image
               source={require('../../../assets/images/IcubeLogo.png')}
-              style={{height: 36, width: 138,right:8}}
+              style={{height: 36, width: 138,}}
             />
           </View>
 
@@ -46,7 +46,7 @@ const Safety = ({navigation}) => {
 
       {/* Videos */}
    
-     <ScrollView style={{flex:1}}>
+     <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false}>
       <View style={{margin: 10, flexDirection: 'row'}}>
         <ImageBackground
           source={require('../../../assets/images/carVideo.png')}

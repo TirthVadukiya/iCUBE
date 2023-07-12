@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   cardViewImg : {
     resizeMode:"center",
-    
+    height:60,width:60
   },
   cardTxt : {
     color:COLORS.text1,
