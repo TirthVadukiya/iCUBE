@@ -14,7 +14,8 @@ export const COLORS = {
     background1: "#CC0000",
     borderClr : "#D6D6D6",
     borderClr1 : "#EFEFEF",
-    text2 : "#2F3C50"
+    text2 : "#2F3C50",
+    background2 : "#FAFAFA",
   };
   
   export default COLORS;

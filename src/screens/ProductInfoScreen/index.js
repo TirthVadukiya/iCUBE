@@ -36,7 +36,8 @@ const styles = StyleSheet.create ({
     marginLeft:26
   },
   productImg : {
-    resizeMode:"contain",
+    resizeMode:"cover",
+    height:137,width:163, 
   },
   productTxt : {
     color: COLORS.Text,

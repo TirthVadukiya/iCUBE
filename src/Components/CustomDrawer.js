@@ -44,23 +44,23 @@ function CustomDrawer({props, navigation}) {
       {/* DrawerTabScreen */}
 
       <View style={{padding: 18, flex: 1}}>
-        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Demo")}>
+        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("OurProduct")}>
           <Text style={styles.DrawerTxt}>Our Product</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}}>
+        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Product")}>
           <Text style={styles.DrawerTxt}>My Product</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}}>
+        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Warranty")}>
           <Text style={styles.DrawerTxt}>Warranty & Maintenance</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}}>
+        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Service")}>
           <Text style={styles.DrawerTxt}>Book Service</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}}>
+        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Shop")}>
           <Text style={styles.DrawerTxt}>My Shop</Text>
         </TouchableOpacity>
       </View>
