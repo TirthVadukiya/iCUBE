@@ -24,14 +24,14 @@ const MainNavigate = () => {
     <NavigationContainer>
 
    <Stack.Navigator screenOptions={{headerShown:false}}  initialRouteName={SplashScreen}>
-      {/* <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false}}/> */}
-      <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
-      <Stack.Screen name='Otp' component={Otp} options={{headerShown:false}}/>
-      <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false}}/>
-      <Stack.Screen name='MainHome' component={DrawerNavigate} />
-      <Stack.Screen name='Profile'  component={Profile}/>
-      <Stack.Screen name='EditProfile'  component={EditProfile}/>
-      <Stack.Screen name='ProductInfo'  component={PRoductInfo}/>
+      <Stack.Screen name='Splash' component={SplashScreen} options={{headerShown:false,animation:'slide_from_right'}} />
+      <Stack.Screen name='Login' component={Login} options={{headerShown:false, animation:"slide_from_right"}}/>
+      <Stack.Screen name='Otp' component={Otp} options={{headerShown:false,animation:"slide_from_right"}}/>
+      <Stack.Screen  name='Sign' component={Signup} options={{headerShown:false, animation:"slide_from_right"}}/>
+      <Stack.Screen name='MainHome' component={DrawerNavigate} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='Profile'  component={Profile} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='EditProfile'  component={EditProfile} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='ProductInfo'  component={PRoductInfo} options={{animation:"slide_from_right"}}/>
       
    </Stack.Navigator>
    </NavigationContainer>

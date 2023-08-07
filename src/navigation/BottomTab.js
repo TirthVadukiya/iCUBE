@@ -38,9 +38,9 @@ const BottomTab = () => {
           fontSize:11,
           fontWeight:"600",
           fontFamily:"Raleway-SemiBold",
-          bottom:5,
-          
-        }
+          bottom:5, 
+        },
+        
       }}
     />
 

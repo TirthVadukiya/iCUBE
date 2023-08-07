@@ -7,10 +7,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
+  ImageView: {
+    flex:0.17,
+  },
+  LoginImg : {
+    height: 110,
+    width:  "100%",
+   
+  },
+  DetailView : {
+    flex:0.80,
+  },
   AppLogoView: {
     alignItems: 'center',
-    flexDirection: 'column',
-    margin:15,
+    // flexDirection: 'column',
+    margin:10
   },
   AppLogoImg: {
     
@@ -19,7 +30,7 @@ const styles = StyleSheet.create({
   },
   LoginTxtView: {
     flexDirection: 'column',
-    alignItems: 'center',top:50
+    alignItems: 'center',top:80,
   },
   LoginTxt1: {
     color: '#EC581F',
@@ -40,7 +51,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#D6D6D6',
     marginHorizontal: 25,height:45,
-    margin: 10,marginTop:80
+    margin: 10,marginTop:100
   },
   txtInput: {
     width: '100%',
@@ -65,7 +76,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontFamily: 'Raleway-Bold',
   },
- 
   footerTxt1: {
     fontSize: 14,
     fontWeight: '400',
@@ -79,11 +89,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Raleway-Regular',
    
   },
+  BottomView : {
 
-  LoginImg : {
-    height: 110,
-    width:  "100%",
-   
   }
 });
 

@@ -35,7 +35,7 @@ const Service = ({navigation}) => {
               alignItems: 'center',
               marginTop: 15,
             }}>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <TouchableOpacity onPress={() => navigation.goBack()} style={styles.BackBtn}>
               <View style={styles.ProfileImg}>
                 <Image
                   source={require('../../../assets/images/arrowBack.png')}

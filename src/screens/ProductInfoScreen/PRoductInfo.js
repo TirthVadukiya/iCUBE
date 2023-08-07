@@ -23,7 +23,7 @@ const PRoductInfo = ({navigation}) => {
             justifyContent: 'space-evenly',
             alignItems: 'center',
           }}>
-          <TouchableOpacity onPress={() => navigation.navigate("OurProduct")}>
+          <TouchableOpacity onPress={() => navigation.navigate("OurProduct")} style={styles.BackBtn}>
             <Image
               source={require('../../../assets/images/arrowBack.png')}
               style={styles.arrowBackBtn}

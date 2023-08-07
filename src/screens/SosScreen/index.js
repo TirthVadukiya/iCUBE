@@ -10,9 +10,12 @@ const styles = StyleSheet.create ({
   serviceImg : {
     height:"96%",width:"100%"
 },
+BackBtn : {
+  right: 15,
+},
 arrowBackBtn: {
     resizeMode: 'center',
-    right: 15,
+    
     height: 35,
     width: 35,
     alignItems: 'center',

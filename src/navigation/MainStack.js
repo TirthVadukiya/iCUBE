@@ -18,12 +18,12 @@ function MainStack() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name='home' component={Home} />
-      <Stack.Screen name='Warranty' component={Warranty} />
-      <Stack.Screen name='Product' component={Product} />
-      <Stack.Screen name='Service' component={Service} />
-      <Stack.Screen name='Shop' component={Shop} />
-      <Stack.Screen name='OurProduct' component={OurProduct} />
+      <Stack.Screen name='home' component={Home} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='Warranty' component={Warranty} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='Product' component={Product} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='Service' component={Service} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='Shop' component={Shop} options={{animation:"slide_from_right"}}/>
+      <Stack.Screen name='OurProduct' component={OurProduct} options={{animation:"slide_from_right"}}/>
     </Stack.Navigator>
   );
 }

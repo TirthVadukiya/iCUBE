@@ -17,7 +17,7 @@ const Warranty = ({navigation}) => {
             justifyContent: 'space-evenly',
             alignItems: 'center',
           }}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.goBack()}  style={styles.BackBtn}>
             {/* <View style={styles.ProfileImg}> */}
             <Image
               source={require('../../../assets/images/arrowBack.png')}

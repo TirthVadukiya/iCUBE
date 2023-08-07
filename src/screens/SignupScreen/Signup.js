@@ -9,38 +9,36 @@ const Signup = ({navigation}) => {
 
   return (
     <View style={styles.main}>
-        
-        {/* TopImg */}
-     
-        <View>
-          <Image source={require("../../../assets/images/Image.png")} style={styles.SignImg}/>
-        </View>
-          
-        <ScrollView style={{flex:1,}} showsVerticalScrollIndicator={false}>  
-        <View style={styles.AppLogoView}>
+         
+    {/* Top Image */}
+
+     <View style={styles.TopImgView}>       
+     <Image source={require("../../../assets/images/Image.png")} style={styles.SignImg}/>
+      </View>    
+      
+     <View style={styles.DetailView}>
+  
+     <View style={styles.AppLogoView}>
         <Image
           source={require('../../../assets/images/IcubeLogo.png')}
           style={styles.AppLogoImg}
         />
-      </View>
 
-      <View style={{alignItems: 'center'}}>
         <Image
           source={require('../../../assets/images/parking.png')}
           style={{height: 140, width: 140, top:20 }}
         />
       </View>
 
-       {/* SignupTxt */}
+   
+     {/* SignupTxt */}
 
-       <View style={styles.signupView}>
+     <View style={styles.signupView}>
         <Text style={styles.signupTxt}>Sing Up</Text>
         <Text style={styles.signupTxt1}>
         Use your i-cube Parking Elevators  account to continue
         </Text>
       </View>
-
-        {/* SignupTextInput */}
 
       <View style={{alignItems: 'center', margin: 10,marginTop:30}}>
         <View style={styles.viewTextInput}>
@@ -76,24 +74,28 @@ const Signup = ({navigation}) => {
         </View>
       </View>
 
-       {/* SignupBtn */}
+        {/* SignupBtn */}
 
-       <TouchableOpacity onPress={() => navigation.navigate('Otp')} style={styles.LoginBtn}>
+        <TouchableOpacity onPress={() => navigation.navigate('Otp')} style={styles.LoginBtn}>
           <Text style={styles.LoginTxt}>SIGNUP</Text>
           <Image
             source={require('../../../assets/images/LoginLogo.png')}
             style={{height: 20, width: 20, left: 5}}
           />
       </TouchableOpacity>
-
-      <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",marginTop:30,marginBottom:20}}>
-      <Text style={styles.footerTxt1}>Don’t have an account?</Text>
+ 
+     </View>
+      
+     <View style={styles.BottomView}>
+      <View style={{flexDirection:"row",justifyContent:"center"}}>
+      <Text style={styles.footerTxt1} onPress={()=> navigation.navigate("Login")}>Don’t have an account?</Text>
       <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Login")}> Login</Text>
+      </View>
       </View>
 
 
-     </ScrollView>
     </View>
+    
   );
 };
 

@@ -4,8 +4,8 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
-  ImageBackground,
-  Dimensions,ScrollView
+  ScrollView,
+  SafeAreaView
 } from 'react-native';
 import React from 'react';
 import styles from '.';
@@ -14,27 +14,32 @@ const Login = ({navigation}) => {
   const [number, onChangeNumber] = React.useState('');
 
   return (
-    <View style={styles.main}>
-        <View>
-          <Image source={require("../../../assets/images/Image.png")} style={styles.LoginImg}/>
-        </View>
+    <SafeAreaView style={styles.main}>
+         
+    {/* HeaderView */}
 
-       <ScrollView style={{flex:1,}} showsVerticalScrollIndicator={false}>
-        <View style={styles.AppLogoView}>
+     <View style={styles.ImageView}>
+        <Image source={require("../../../assets/images/Image.png")} style={styles.LoginImg}/>
+     </View>
+
+     {/* DetailView */}
+
+     <View style={styles.DetailView}>
+
+     <View style={styles.AppLogoView}>
         <Image
           source={require('../../../assets/images/IcubeLogo.png')}
           style={styles.AppLogoImg}
         />
-      </View>
 
-      <View style={{alignItems: 'center',top:30}}>
-        <Image
+       <Image
           source={require('../../../assets/images/parking.png')}
-          style={{height: 140, width: 140,  }}
+          style={{height: 140, width: 140,top:50  }}
         />
       </View>
 
-      {/* LoginTxt */}
+    
+         {/* LoginTxt */}
 
       <View style={styles.LoginTxtView}>
         <Text style={styles.LoginTxt1}>Log In</Text>
@@ -42,9 +47,7 @@ const Login = ({navigation}) => {
         Use your i-cube Parking Elevators account to continue
         </Text>
       </View>
-
-      {/* TextInput */}
-
+     
       <View style={styles.viewTextInput}>
         <TextInput
           style={styles.txtInput}
@@ -57,24 +60,27 @@ const Login = ({navigation}) => {
         />
       </View>
 
-      {/* LoginBtn */}
-
-      <TouchableOpacity onPress={() => navigation.navigate('MainHome')}>
-        <View style={styles.LoginBtn}>
+      <TouchableOpacity onPress={() => navigation.navigate('MainHome')} style={styles.LoginBtn}>
+       
           <Text style={styles.LoginTxt}>LOGIN</Text>
           <Image
             source={require('../../../assets/images/LoginLogo.png')}
             style={{height: 20, width: 20, left: 5}}
           />
-        </View>
+      
       </TouchableOpacity>
+      
+     </View>
 
-      <View style={{flexDirection:"row",justifyContent:"center",marginTop:60,marginBottom:10}}>
-      <Text style={styles.footerTxt1}>Don’t have an account?</Text>
+
+      <View style={styles.BottomView}>
+      <View style={{flexDirection:"row",justifyContent:"center"}}>
+      <Text style={styles.footerTxt1} onPress={()=> navigation.navigate("Sign")}>Don’t have an account?</Text>
       <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
       </View>
-      </ScrollView>
       </View>
+
+    </SafeAreaView>
   );
 };
 

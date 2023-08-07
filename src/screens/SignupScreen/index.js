@@ -7,17 +7,24 @@ const styles = StyleSheet.create ({
     flex:1,
     backgroundColor:'white'
    },
+   TopImgView : {
+      flex:0.18,
+ 
+   },
    SignImg : {
     height: 110,
     width:  "100%",  
   },
-  AppLogoView: {
+   DetailView : {
+    flex:0.78,
+ 
+   },
+   AppLogoView: {
     alignItems: 'center',
     flexDirection: 'column',
     margin:15
   },
   AppLogoImg: {
-    
     height: 54,
     width: 200,
   },
@@ -87,6 +94,9 @@ const styles = StyleSheet.create ({
     color: COLORS.black,
     fontFamily: 'Raleway-Regular',
   },
+  BottomView : {
+    top:10
+  }
 })
 
 export default styles;

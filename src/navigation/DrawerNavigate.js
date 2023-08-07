@@ -12,7 +12,7 @@ const Drawer = createDrawerNavigator();
 function DrawerNavigate() {
   return (
     <Drawer.Navigator screenOptions={{headerShown:false}} drawerContent={(props) => <CustomDrawer {...props} />}>
-      <Drawer.Screen name="Home" component={BottomTab} />
+      <Drawer.Screen name="Home" component={BottomTab}  />
     </Drawer.Navigator>
   );
 }

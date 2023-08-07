@@ -1,5 +1,5 @@
-import {View, Text, TouchableOpacity, Image,ScrollView} from 'react-native'
-import React from 'react'
+import {View, Text, TouchableOpacity, Image,ScrollView,BackHandler} from 'react-native'
+import React, {useEffect} from 'react'
 import styles from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {SliderBox} from 'react-native-image-slider-box';
@@ -12,6 +12,9 @@ const images = [
 ];
 
 const Home = ({navigation}) => {
+
+
+ 
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       {/* header bar */}

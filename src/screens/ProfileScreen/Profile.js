@@ -21,13 +21,11 @@ const Profile = ({navigation}) => {
               alignItems: 'center',
               marginTop: 15,
             }}>
-            <TouchableOpacity onPress={() => navigation.navigate("home")}>
-              <View style={styles.ProfileImg}>
+            <TouchableOpacity onPress={() => navigation.navigate("home")}  style={styles.BackBtn}>
                 <Image
                   source={require('../../../assets/images/arrowBack.png')}
                   style={styles.arrowBackBtn}
-                />
-              </View>
+                />    
             </TouchableOpacity>
 
             <View>
