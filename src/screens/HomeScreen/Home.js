@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity, Image,ScrollView,BackHandler} from 'react-native'
+import {View, Text, TouchableOpacity, Image,ScrollView,} from 'react-native'
 import React, {useEffect} from 'react'
 import styles from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
