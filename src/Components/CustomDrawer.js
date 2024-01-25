@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  DrawerContentScrollView,
- 
-} from '@react-navigation/drawer';
+import {DrawerContentScrollView} from '@react-navigation/drawer';
 import {
   Alert,
   StyleSheet,
@@ -12,18 +9,57 @@ import {
   Image,
 } from 'react-native';
 
+import {ICONS} from '../constants/icons';
+import {useDispatch} from 'react-redux';
+import {logout} from '../redux/slices/LoginSlice';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  OUR_PRODUCT,
+  PRODUCT,
+  PROFILE,
+  SERVICE,
+  SHOP,
+  WARRANTY,
+} from '../constants/route-names';
+
 function CustomDrawer({props, navigation}) {
+  const dispatch = useDispatch();
+
+  async function logoutFromApp() {
+    Alert.alert(
+      'Logout',
+      'Are you sure you want to logout?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Logout',
+          onPress: async () => {
+            // props.navigation.closeDrawer();
+            await AsyncStorage.removeItem('name');
+            await AsyncStorage.removeItem('token').then(() => {
+              dispatch(logout());
+            });
+          },
+        },
+      ],
+      {cancelable: false},
+    );
+  }
+
   return (
-    <DrawerContentScrollView style={{backgroundColor: '#F5F5F5'}} {...props} showsVerticalScrollIndicator={false}>
+    <DrawerContentScrollView
+      style={{backgroundColor: '#F5F5F5'}}
+      {...props}
+      showsVerticalScrollIndicator={false}>
       {/* Profile Detail */}
       <View style={{left: 20, marginTop: 20}}>
-        <Image
-          source={require('../../assets/images/UserImage.png')}
-          style={styles.ProfileImg}
-        />
+        <Image source={ICONS.user_image} style={styles.ProfileImg} />
         <View style={styles.ProfileTxtView}>
           <Text style={styles.ProfileTxt}>Jainil Bhatt</Text>
-          <TouchableOpacity onPress={()=> navigation.navigate("Profile")}>
+          <TouchableOpacity onPress={() => navigation.navigate(PROFILE)}>
             <View style={styles.ProfileShowDetail}>
               <Text
                 style={{
@@ -44,38 +80,48 @@ function CustomDrawer({props, navigation}) {
       {/* DrawerTabScreen */}
 
       <View style={{padding: 18, flex: 1}}>
-        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("OurProduct")}>
+        <TouchableOpacity
+          style={{marginBottom: 10}}
+          onPress={() => navigation.navigate(OUR_PRODUCT)}>
           <Text style={styles.DrawerTxt}>Our Product</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Product")}>
+        <TouchableOpacity
+          style={{marginBottom: 10}}
+          onPress={() => navigation.navigate(PRODUCT)}>
           <Text style={styles.DrawerTxt}>My Product</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Warranty")}>
+        <TouchableOpacity
+          style={{marginBottom: 10}}
+          onPress={() => navigation.navigate(WARRANTY)}>
           <Text style={styles.DrawerTxt}>Warranty & Maintenance</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Service")}>
+        <TouchableOpacity
+          style={{marginBottom: 10}}
+          onPress={() => navigation.navigate(SERVICE)}>
           <Text style={styles.DrawerTxt}>Book Service</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{marginBottom: 10}} onPress={()=> navigation.navigate("Shop")}>
+        <TouchableOpacity
+          style={{marginBottom: 10}}
+          onPress={() => navigation.navigate(SHOP)}>
           <Text style={styles.DrawerTxt}>My Shop</Text>
         </TouchableOpacity>
       </View>
 
-   
-      <TouchableOpacity style={styles.LogoutBtn} onPress={()=> navigation.navigate("Login")}>
+      <TouchableOpacity
+        style={styles.LogoutBtn}
+        onPress={() => logoutFromApp()}>
         {/* <View style={styles.LogoutBtn}> */}
-          <Image
-            source={require('../../assets/images/logoutLogo.png')}
-            style={{resizeMode: 'center',right:5}}
-          />
-          <Text style={styles.logoutBtnTxt}>Logout</Text>
+        <Image
+          source={require('../../assets/images/logoutLogo.png')}
+          style={{resizeMode: 'center', right: 5}}
+        />
+        <Text style={styles.logoutBtnTxt}>Logout</Text>
         {/* </View> */}
       </TouchableOpacity>
-     
     </DrawerContentScrollView>
   );
 }
@@ -96,7 +142,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     right: 25,
     fontFamily: 'Raleway-SemiBold',
-    top:5
+    top: 5,
   },
   ProfileShowDetail: {
     backgroundColor: '#EC581F',
@@ -118,12 +164,17 @@ const styles = StyleSheet.create({
     width: 155,
     borderRadius: 25,
     alignItems: 'center',
-    justifyContent: 'center',flexDirection:'row',marginTop:"90%",left:15,marginBottom:20
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: '90%',
+    left: 15,
+    marginBottom: 20,
   },
   DrawerTxt: {
     color: '#EC581F',
     fontWeight: '600',
-    fontFamily: 'Raleway-Medium',marginTop:10
+    fontFamily: 'Raleway-Medium',
+    marginTop: 10,
   },
   logoutBtnTxt: {
     color: '#FFF',

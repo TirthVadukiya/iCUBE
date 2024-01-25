@@ -4,121 +4,120 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import styles from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {IMAGES} from '../../constants/images';
+import {ICONS} from '../../constants/icons';
+import {useNetworkStatus} from '../../utils/NetworkUtills';
+import CustomDialogNetwork from '../../utils/CustomDialogNetwork';
+import CustomHeaderAdd from '../../Components/CustomHeaderAdd';
 
 const Safety = ({navigation}) => {
+  const isConnected = useNetworkStatus();
+
   return (
     <View style={styles.main}>
-      {/* header bar */}
-      <View style={styles.headerBarView}>
-        <View
-          style={{
-            flexDirection: 'row',
-            flex: 1,
-            justifyContent: 'space-evenly',
-            alignItems: 'center',
-          }}>
-          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.BackBtn}>
-            
-            <Image
-              source={require('../../../assets/images/arrowBack.png')}
-              style={styles.arrowBackBtn}
-            />
-            
-          </TouchableOpacity>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {/* header bar */}
+        <CustomHeaderAdd
+          navigation={navigation}
+          title={'Safety Manual'}
+          icon={ICONS.notification_icon}
+          // redirect={ADD_TAXES}
+        />
 
-          <View>
-             <Text style={styles.headerTxt}>Safety Manual</Text>
+        {/* Video view */}
+        <View style={{flex: 0.5}}>
+          <View style={{margin: 10, flexDirection: 'row'}}>
+            <TouchableOpacity style={{flex: 1, marginEnd: 8}}>
+              <ImageBackground
+                source={IMAGES.car_video}
+                style={styles.videoImg}>
+                <Image source={ICONS.video_play} style={styles.videoPlayBtn} />
+              </ImageBackground>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{flex: 1, marginStart: 8}}>
+              <ImageBackground
+                source={IMAGES.car_video}
+                style={styles.videoImg}>
+                <Image source={ICONS.video_play} style={styles.videoPlayBtn} />
+              </ImageBackground>
+            </TouchableOpacity>
           </View>
 
-          <View style={{left: 20}}>
-            <Icon name="notifications" size={28} color={'#EC581F'} />
+          <View style={{margin: 10, flexDirection: 'row'}}>
+            <TouchableOpacity style={{flex: 1, marginEnd: 8}}>
+              <ImageBackground
+                source={IMAGES.car_video}
+                style={styles.videoImg}>
+                <Image source={ICONS.video_play} style={styles.videoPlayBtn} />
+              </ImageBackground>
+            </TouchableOpacity>
+
+            <View style={{flex: 1, marginStart: 8}}></View>
           </View>
         </View>
-      </View>
+        {/* 3 video */}
 
-      {/* Videos */}
-   
-     <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false}>
-      <View style={{margin: 10, flexDirection: 'row'}}>
-        <ImageBackground
-          source={require('../../../assets/images/carVideo.png')}
-          style={{height: 115, width: 168}}>
-          <TouchableOpacity style={styles.videoPlayBtn}>
-            <Image
-              source={require('../../../assets/images/playBtn.png')}
-              style={{resizeMode: 'center'}}
-            />
-          </TouchableOpacity>
-        </ImageBackground>
+        {/* Safety Manual PDF */}
+        <View style={{flex: 0.5}}>
+          <View style={{margin: 10}}>
+            <Text style={styles.pdfTxt}>Safety Manual PDF</Text>
+          </View>
 
-        <ImageBackground
-          source={require('../../../assets/images/carVideo.png')}
-          style={{height: 115, width: 168, left: 5}}>
-          <TouchableOpacity style={styles.videoPlayBtn}>
-            <Image
-              source={require('../../../assets/images/playBtn.png')}
-              style={{resizeMode: 'center'}}
-            />
-          </TouchableOpacity>
-        </ImageBackground>
-      </View>
-
-      <View style={{left: 10}}>
-        <ImageBackground
-          source={require('../../../assets/images/carVideo.png')}
-          style={{height: 115, width: 168}}>
-          <TouchableOpacity style={styles.videoPlayBtn}>
-            <Image
-              source={require('../../../assets/images/playBtn.png')}
-              style={{resizeMode: 'center'}}
-            />
-          </TouchableOpacity>
-        </ImageBackground>
-      </View>
-
-      {/* SafetyPdf */}
-
-      <Text style={styles.safetyPdfTxt}>Safety Manual PDF</Text>
-
-      {/* pdf View */}
-
-       <TouchableOpacity>
-        <View style={styles.pdfView}>
-         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
-          
-          <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
+          <View style={{margin: 10}}>
+            <TouchableOpacity>
+              <View style={styles.pdfView}>
+                <Image
+                  source={require('../../../assets/images/pdf_icon.png')}
+                  style={styles.pdfImg}
+                />
+                <Text style={styles.pdfViewTxt}>
+                  Jorem ipsum dolor sit Jorem ipsum{' '}
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity st>
+              <View style={styles.pdfView}>
+                <Image
+                  source={require('../../../assets/images/pdf_icon.png')}
+                  style={styles.pdfImg}
+                />
+                <Text style={styles.pdfViewTxt}>
+                  Jorem ipsum dolor sit Jorem ipsum{' '}
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.pdfView}>
+                <Image
+                  source={require('../../../assets/images/pdf_icon.png')}
+                  style={styles.pdfImg}
+                />
+                <Text style={styles.pdfViewTxt}>
+                  Jorem ipsum dolor sit Jorem ipsum{' '}
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={[styles.pdfView, {marginBottom: 15}]}>
+                <Image
+                  source={require('../../../assets/images/pdf_icon.png')}
+                  style={styles.pdfImg}
+                />
+                <Text style={styles.pdfViewTxt}>
+                  Jorem ipsum dolor sit Jorem ipsum{' '}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-        <View style={styles.pdfView}>
-         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
-          
-          <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
-        </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-        <View style={styles.pdfView}>
-         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
-          
-          <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
-        </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={{marginBottom:20}}>
-        <View style={styles.pdfView}>
-         <Image source={require("../../../assets/images/PdfIcon1.png")} style={styles.pdfImg}/>
-          
-          <Text style={styles.PdfTxt}>Jorem ipsum dolor sit Jorem ipsum </Text>
-        </View>
-        </TouchableOpacity>
-        </ScrollView>
+      </ScrollView>
+      <CustomDialogNetwork visible={!isConnected} />
     </View>
   );
 };

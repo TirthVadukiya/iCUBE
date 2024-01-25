@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "114272259509",
+    "project_id": "i-cube-5a0d8",
+    "storage_bucket": "i-cube-5a0d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114272259509:android:990f2f5c11855d08a09dfc",
+        "android_client_info": {
+          "package_name": "com.icube"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4gfGEmf_m2Be2dontDcIGDjdXLQBcjQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

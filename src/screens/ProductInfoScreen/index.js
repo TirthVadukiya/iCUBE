@@ -1,99 +1,104 @@
-import React from "react";
-import {StyleSheet} from "react-native";
-import COLORS from "../../../assets/colors/colors";
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import COLORS from '../../../assets/colors/colors';
 
-const styles = StyleSheet.create ({
-  main : {
+const styles = StyleSheet.create({
+  main: {
     backgroundColor: COLORS.primary,
-    flex: 1
+    flex: 1,
   },
-  headerBarView: {
-    backgroundColor: 'white',
+  headerView: {
     flexDirection: 'row',
-    height: '12%',
     alignItems: 'center',
-    
+    justifyContent: 'space-between',
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#fff',
+    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 15,
+    paddingEnd: 20,
   },
-  BackBtn : {
-    right: 15,
+  arrowBtn: {
+    resizeMode: 'contain',
+    height: 17,
+    width: 23,
   },
-  arrowBackBtn: {
-    resizeMode: 'center',
-    
-    height: 35,
-    width: 35,
+  headerTitleTxt: {
+    color: '#EC581F',
+    fontSize: 22,
+    fontWeight: '700',
+    fontFamily: 'Raleway-Regular',
+  },
+  productInfoImg: {
+    resizeMode: 'contain',
+    height: 180,
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  headerBarTxt: {
-    fontSize: 22, 
+  parkingTxt: {
+    fontSize: 20,
+    color: COLORS.primary,
     fontWeight: '700',
-    color: COLORS.black,
-    fontFamily: 'Raleway-Bold',
-    right:4
+    fontFamily: 'Raleway-Regular',
   },
-  productView : {
-    backgroundColor:COLORS.bottomTab,
-    height:120,
-    width:"85%",borderRadius:18,flexDirection:"column",alignItems:"center",marginTop:65,
-    marginLeft:26
+  parkingInfoTxt: {
+    color: 'black',
+    fontFamily: 'Raleway-Regular',
+    fontSize: 12,
+    fontWeight: '400',
+    lineHeight: 19,
+    textAlign: 'left',
   },
-  productImg : {
-    resizeMode:"cover",
-    height:137,width:163, 
+  arrowBack: {
+    height: 11,
+    width: 16,
   },
-  productTxt : {
-    color: COLORS.Text,
-    fontWeight:"700",
-    fontSize:22,
-    fontFamily:"Raleway-Bold"
+  installationView: {
+    marginTop: 20,
+    marginStart: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  productInfoView : {
-    justifyContent:"center",
-    padding:20,left:8
+  installationTxt: {
+    color: '#000',
+    fontSize: 12,
+    fontFamily: 'Raleway-Regular',
+    fontWeight: '500',
+    marginStart: 10,
   },
-  productInfoTxt : {
-     color : COLORS.TxtBlack,
-     fontSize:12,
-     fontWeight:"400",
-     fontFamily : "Raleway-Regular",
-    lineHeight:19
+  carVideoView: {
+    resizeMode: 'contain',
+    height: 150,
+    width: '100%',
+    borderRadius: 20,
+    overflow: 'hidden',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
   },
-  InfoView : {
-   flexDirection:"row",alignItems:"center",left:10
+  playBtn: {
+    resizeMode: 'contain',
+    height: 27,
+    width: 27,
+    marginEnd: 15,
+    marginBottom: 10,
   },
-  arrowIcon : {
-      resizeMode:"center"
+  productInfoBtn: {
+    width: '100%',
+    height: 45,
+    backgroundColor: '#EC581F',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    fontSize: 14,
+    marginTop: 25,
   },
-  InfoTxt : {
-   color: COLORS.TxtBlack,
-   fontSize:11,
-   fontWeight:"500",
-   fontFamily: "Raleway-Medium",
-   marginRight:70
+  informationTxt: {
+    color: '#fff',
+    fontSize: 16,
+    fontFamily: 'Raleway-regular',
+    fontWeight: '600',
   },
-  ProductVideoImg : {
-    height:160,width:310,left:24,borderRadius:20,overflow:"hidden"
-  },
-  ProductView : {
-    marginTop:125,width:27,marginLeft:260,
-  },
-  playBtn : {
-    resizeMode:"contain",height:27,width:27
-  },
-  InfoBtn : {
-    height:48,width:312,
-    backgroundColor:COLORS.black,
-    margin:20,marginBottom:20,borderRadius:10,left:2,justifyContent:'center'
-  },
-  InfoBtnTxt : {
-  textAlign:"center",
-  fontSize:16,
-  color:COLORS.primary,
-  fontWeight:"600",
-  fontFamily:"Raleway-SemiBold"
-  }
-})
+});
 
 export default styles;
-

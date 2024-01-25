@@ -1,101 +1,147 @@
-import {View, Text, Image, TextInput,TouchableOpacity,ImageBackground,ScrollView} from 'react-native';
-import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  ImageBackground,
+  ScrollView,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
 import styles from '.';
+import {IMAGES} from '../../constants/images';
+import {ICONS} from '../../constants/icons';
+import {useDispatch, useSelector} from 'react-redux';
+import SnackbarShow from '../../utils/SnackbarShow';
+import {
+  PLEASE_ENTER_ADDRESS,
+  PLEASE_ENTER_NAME,
+  PLEASE_ENTER_PHONE,
+} from '../../utils/SnackBarLabel';
+import {SignUpAction} from '../../redux/action/SignUAction';
+import {useNetworkStatus} from '../../utils/NetworkUtills';
+import CustomProgress from '../../utils/CustomProgress';
+import CustomDialogNetwork from '../../utils/CustomDialogNetwork';
 
 const Signup = ({navigation}) => {
-  const [text, onChangeText] = useState('');
-  const [number, onChangeNumber] = useState('');
-  const [address, onChangeAddress] = useState('');
+  const isConnected = useNetworkStatus();
+  const dispatch = useDispatch();
+  const signupResponse = useSelector(state => state.AuthSignup);
+
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+  const [address, setAddress] = useState('');
+
+  useEffect(() => {
+    if (signupResponse === undefined) return;
+    else callSignUpResponse(signupResponse);
+  }, [signupResponse]);
+
+  async function callSignUpResponse(signupResponse) {
+    if (signupResponse?.data.status) {
+      SnackbarShow(signupResponse?.data.message);
+      setTimeout(() => {
+        navigation.goBack();
+      }, 2000);
+    }
+    if (signupResponse.data.error_message) {
+      dispatch(resetSignupAdmin());
+    }
+    signupResponse.data.error_message
+      ? SnackbarShow(signupResponse.data.error_message)
+      : null;
+  }
+
+  function callSignUp() {
+    if (name == '') {
+      SnackbarShow(PLEASE_ENTER_NAME);
+      return;
+    }
+    if (number == '') {
+      SnackbarShow(PLEASE_ENTER_PHONE);
+      return;
+    }
+    if (address == '') {
+      SnackbarShow(PLEASE_ENTER_ADDRESS);
+      return;
+    }
+
+    let data = new FormData();
+    data.append('name', name);
+    data.append('mobile_no', number);
+    data.append('email', address);
+
+    dispatch(SignUpAction({data}));
+  }
 
   return (
-    <View style={styles.main}>
-         
-    {/* Top Image */}
-
-     <View style={styles.TopImgView}>       
-     <Image source={require("../../../assets/images/Image.png")} style={styles.SignImg}/>
-      </View>    
-      
-     <View style={styles.DetailView}>
-  
-     <View style={styles.AppLogoView}>
-        <Image
-          source={require('../../../assets/images/IcubeLogo.png')}
-          style={styles.AppLogoImg}
-        />
-
-        <Image
-          source={require('../../../assets/images/parking.png')}
-          style={{height: 140, width: 140, top:20 }}
-        />
+    <View style={styles.container}>
+      <View style={{flex: 0.2}}>
+        <Image source={IMAGES.Image} style={styles.headerImg} />
       </View>
 
-   
-     {/* SignupTxt */}
+      <View style={{margin: 20, flex: 0.8, alignItems: 'center'}}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={{alignItems: 'center'}}>
+            <Image source={ICONS.icube_logo} style={styles.imageLogo} />
 
-     <View style={styles.signupView}>
-        <Text style={styles.signupTxt}>Sing Up</Text>
-        <Text style={styles.signupTxt1}>
-        Use your i-cube Parking Elevators  account to continue
-        </Text>
-      </View>
+            <Image source={ICONS.parking} style={styles.carLogo} />
+          </View>
 
-      <View style={{alignItems: 'center', margin: 10,marginTop:30}}>
-        <View style={styles.viewTextInput}>
+          <View style={{alignItems: 'center', marginTop: 10}}>
+            <Text style={styles.loginTxt}>Sing Up</Text>
+            <Text style={styles.descriptionTxt}>
+              Use your i-cube Parking Elevators account to continue
+            </Text>
+          </View>
           <TextInput
             style={styles.txtInput}
-            onChangeText={onChangeText}
-            value={text}
-            placeholder="Name"
+            placeholder={'Name'}
             placeholderTextColor={'#AEA8B2'}
+            value={name}
+            onChangeText={v => setName(v)}
           />
-        </View>
-
-        <View style={styles.viewTextInput}>
           <TextInput
             style={styles.txtInput}
-            onChangeText={onChangeNumber}
+            placeholder={'Mobile Number'}
+            placeholderTextColor={'#AEA8B2'}
             value={number}
-            placeholder="Mobile Number"
-            keyboardType="numeric"
             maxLength={10}
-            placeholderTextColor={'#AEA8B2'}
+            keyboardType="number-pad"
+            onChangeText={v => setNumber(v)}
           />
-        </View>
-
-        <View style={styles.viewTextInputAddress}>
           <TextInput
-            style={styles.txtInput}
-            onChangeText={onChangeAddress}
-            value={address}
-            placeholder="Address"
+            style={styles.txtAnnInput}
+            placeholder={'Address'}
             placeholderTextColor={'#AEA8B2'}
+            value={address}
+            onChangeText={v => setAddress(v)}
           />
+
+          <TouchableOpacity
+            style={styles.loginBtn}
+            onPress={() => callSignUp()}>
+            <Text style={styles.loginTxtBtn}>Sing Up</Text>
+            <Image source={ICONS.login_logo} style={styles.loginLogo} />
+          </TouchableOpacity>
+
+          <View style={styles.viewLoginBtn}>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+              <Text style={styles.signupTxt}>
+                Already have an account? Login
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </View>
+      {signupResponse.loading ? (
+        <View style={styles.loading}>
+          <CustomProgress />
         </View>
-      </View>
-
-        {/* SignupBtn */}
-
-        <TouchableOpacity onPress={() => navigation.navigate('Otp')} style={styles.LoginBtn}>
-          <Text style={styles.LoginTxt}>SIGNUP</Text>
-          <Image
-            source={require('../../../assets/images/LoginLogo.png')}
-            style={{height: 20, width: 20, left: 5}}
-          />
-      </TouchableOpacity>
- 
-     </View>
-      
-     <View style={styles.BottomView}>
-      <View style={{flexDirection:"row",justifyContent:"center"}}>
-      <Text style={styles.footerTxt1} onPress={()=> navigation.navigate("Login")}>Don’t have an account?</Text>
-      <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Login")}> Login</Text>
-      </View>
-      </View>
-
-
+      ) : null}
+      <CustomDialogNetwork visible={!isConnected} />
     </View>
-    
   );
 };
 

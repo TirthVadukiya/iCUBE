@@ -1,37 +1,21 @@
-import { View, Text,Image, StyleSheet,ImageBackground } from 'react-native'
-import React, {useEffect} from 'react'
-import Icons from 'react-native-vector-icons/Ionicons'
-import styles from '.'
-import DrawerNavigate from '../../navigation/DrawerNavigate'
-import Login from '../LoginScreen/Login'
-
+import {View, Text, Image, StyleSheet, ImageBackground} from 'react-native';
+import React, {useEffect} from 'react';
+import Icons from 'react-native-vector-icons/Ionicons';
+import styles from '.';
+import DrawerNavigate from '../../navigation/DrawerNavigate';
+import Login from '../LoginScreen/Login';
+import auth from '@react-native-firebase/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SplashScreen = ({navigation}) => {
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.navigate("Login");
-    }, 3000);
-  }, []);
-
-  // const checkIsLogin = async () => {
-  //   try {
-  //     const value = await AsyncStorage.getItem('token');
-  //     if (value !== null) {
-  //       navigation.navigate(DrawerNavigate);
-  //     } else {
-  //       navigation.navigate(Login);
-  //     }
-  //   } catch (e) {
-  //     console.error('Splash');
-  //   }
-  // };
-
   return (
     <View style={styles.main}>
-       <Image  source={require('../../../assets/images/IcubeLogo.png')} style={styles.SplashImg}/>
+      <Image
+        source={require('../../../assets/images/icube_logo.png')}
+        style={styles.SplashImg}
+      />
     </View>
-  )
-}
-
+  );
+};
 
 export default SplashScreen;

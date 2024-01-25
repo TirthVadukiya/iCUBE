@@ -1,102 +1,118 @@
-import React from "react";
-import { StyleSheet,Dimensions} from "react-native";
-import COLORS from "../../../assets/colors/colors";
+import React from 'react';
+import {StyleSheet, Dimensions} from 'react-native';
+import COLORS from '../../../assets/colors/colors';
 
-const styles = StyleSheet.create ({
-   main : {
-    flex:1,
-    backgroundColor:'white'
-   },
-   TopImgView : {
-      flex:0.18,
- 
-   },
-   SignImg : {
-    height: 110,
-    width:  "100%",  
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
   },
-   DetailView : {
-    flex:0.78,
- 
-   },
-   AppLogoView: {
-    alignItems: 'center',
-    flexDirection: 'column',
-    margin:15
+  headerImg: {
+    // resizeMode: 'contain',
+    height: 125,
+    width: '100%',
   },
-  AppLogoImg: {
-    height: 54,
-    width: 200,
+  imageLogo: {
+    height: 45,
+    width: 165,
   },
-  signupView : {
-    flexDirection:"column",alignItems:"center",top:25
+  carLogo: {
+    height: 130,
+    width: 130,
+    marginTop: 10,
   },
-  signupTxt : {
-     color:"#EC581F",
-     fontSize:25,
-     fontWeight:"700",
-     fontFamily:"Raleway-Bold"
+  loginTxt: {
+    fontSize: 22,
+    color: COLORS.text,
+    fontFamily: 'Raleway-Regular',
+    fontWeight: '700',
   },
-  signupTxt1 : {
-    color:"#727270",
-    fontSize:14,
-    fontWeight:"400",
+  descriptionTxt: {
+    fontWeight: '400',
+    fontSize: 14,
+    fontFamily: 'Raleway-Regular',
+    color: COLORS.text3,
   },
-  viewTextInput: {
-    backgroundColor: '#FFF',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#D6D6D6',
-    height:45,
-    width:320,marginTop:10
-  },
+
   txtInput: {
     width: '100%',
-    padding: 10,
-    color: 'black',
-    fontSize:14,
-    fontWeight:"400",
-    fontFamily:'Raleway-Regular'
-  },
-  viewTextInputAddress: {
-    backgroundColor: '#FFF',
-    borderRadius: 10,
-    borderWidth: 1,
+    height: 50,
     borderColor: '#D6D6D6',
-    height:80,
-    width:320,marginTop:10
+    borderWidth: 1,
+    borderRadius: 8,
+    fontSize: 14,
+    fontWeight: '600',
+    fontFamily: 'Lato-Semibold',
+    paddingHorizontal: 10,
+    marginTop: 10,
+    color: COLORS.text1,
   },
-  LoginBtn: {
-    backgroundColor: '#EC581F',
+  txtAnnInput: {
+    marginTop: 10,
+    width: '100%',
+    height: 100,
+    borderColor: '#D6D6D6',
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderRadius: 10,
+    fontSize: 14,
+    fontWeight: '600',
+    fontFamily: 'Lato-Semibold',
+    // marginTop: 20,
+    color: '#000',
+    alignItems: 'flex-start',
+    textAlign: 'left',
+    textAlignVertical: Platform.OS == 'android' ? 'top' : 'auto',
+  },
+
+  loginBtn: {
+    width: '100%',
     height: 45,
-    flexDirection: 'row',
+    backgroundColor: '#EC581F',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 10,
-    marginHorizontal: 19,
-  },
-  LoginTxt : {
-   fontSize:14,
-   fontWeight:"400",
-   color: COLORS.primary,
-   fontFamily:'Raleway-Regular'
-  },
-  footerTxt1: {
+    borderRadius: 8,
     fontSize: 14,
-    fontWeight: '400',
-    color: COLORS.black,
-    fontFamily: 'Raleway-Regular',
-  
+    marginTop: 10,
+    flexDirection: 'row',
+    padding: 10,
   },
-  footerTxt2: {
+  loginTxtBtn: {
+    color: '#fff',
     fontSize: 14,
     fontWeight: '700',
-    color: COLORS.black,
     fontFamily: 'Raleway-Regular',
   },
-  BottomView : {
-    top:10
-  }
-})
+  loginLogo: {
+    height: 18,
+    width: 18,
+    marginLeft: 10,
+  },
+  viewLoginBtn: {
+    width: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // position: 'absolute',
+    // bottom: 0,
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  signupTxt: {
+    color: '#EC581F',
+    fontSize: 14,
+    fontFamily: 'Raleway-Regular',
+    fontWeight: '400',
+  },
+  loading: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default styles;

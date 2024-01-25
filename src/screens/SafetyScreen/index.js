@@ -7,72 +7,77 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  headerBarView: {
-    backgroundColor: 'white',
+  headerView: {
     flexDirection: 'row',
-    height: '12%',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#fff',
+    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 15,
+    paddingEnd: 20,
   },
-  BackBtn : {
-    right: 25,
+  arrowBtn: {
+    resizeMode: 'contain',
+    height: 17,
+    width: 23,
   },
-  arrowBackBtn: {
-    resizeMode: 'center',
-   
-    height: 35,
-    width: 35,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  headerTxt : {
-    fontSize:22,
-    color:COLORS.black,
-    fontWeight:"700",
-    fontFamily:'Raleway-Bold'
-  },
-  videoPlayBtn: {
-    backgroundColor: '#EC581F',
-    height: 30,
-    width: 30,
-    borderRadius: 25,
-    left: 130,
-    top: 80,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  safetyPdfTxt: {
-    color: COLORS.black,
+  headerTitleTxt: {
+    color: '#EC581F',
     fontSize: 22,
     fontWeight: '700',
-    fontStyle: 'normal',
     fontFamily: 'Raleway-Regular',
-    marginTop: 20,
-    left: 11,
   },
-
+  videoImg: {
+    // resizeMode: 'contain',
+    height: 105,
+    width: '100%',
+    overflow: 'hidden',
+    borderRadius: 12,
+    marginEnd: 10,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+  },
+  videoPlayBtn: {
+    resizeMode: 'contain',
+    height: 25,
+    width: 25,
+    marginEnd: 10,
+    marginBottom: 5,
+  },
+  videoView: {
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    flex: 1,
+    marginEnd: 10,
+    marginBottom: 10,
+  },
+  pdfTxt: {
+    color: '#EC581F',
+    fontSize: 22,
+    fontWeight: '700',
+    fontFamily: 'Raleway-Regular',
+  },
   pdfView: {
-    height: 60,
-    width: 340,
-  marginTop:10,left:10,
-    borderRadius: 18,
-    backgroundColor: COLORS.background,
-    flexDirection: 'row',
+    backgroundColor: '#F4F4F4',
+    padding: 10,
+    borderRadius: 10,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    flexDirection: 'row',
+    marginTop: 15,
   },
-  pdfImg : {
-     resizeMode:"center",
-     height:48,width:48,right:10
+  pdfImg: {
+    resizeMode: 'contain',
+    height: 30,
+    width: 30,
   },
- 
-  PdfTxt: {
+  pdfViewTxt: {
+    color: '#EC581F',
     fontSize: 14,
     fontWeight: '600',
-    color: COLORS.black,
-    fontFamily: "Raleway-SemiBold",
-    right:10,
-    textAlign:"center",
-    
+    fontFamily: 'Raleway-Regular',
+    marginStart: 15,
   },
 });
 

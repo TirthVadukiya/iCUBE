@@ -4,151 +4,192 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  TextInput,ScrollView
+  TextInput,
+  ScrollView,
+  KeyboardAvoidingView,
+  Keyboard,
 } from 'react-native';
 import React from 'react';
 import styles from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {ICONS} from '../../constants/icons';
+import SnackbarShow from '../../utils/SnackbarShow';
+import {
+  PLEASE_ENTER_COMPANY,
+  PLEASE_ENTER_DESIGNATION,
+  PLEASE_ENTER_EMAIL,
+  PLEASE_ENTER_FIRST_NAME,
+  PLEASE_ENTER_LAST_NAME,
+  PLEASE_ENTER_MESSAGE,
+  PLEASE_ENTER_PHONE,
+} from '../../utils/SnackBarLabel';
+import {useNetworkStatus} from '../../utils/NetworkUtills';
+import CustomDialogNetwork from '../../utils/CustomDialogNetwork';
+import CustomHeaderAdd from '../../Components/CustomHeaderAdd';
 
 const Service = ({navigation}) => {
-  const [FirstName, onChangeFirstName] = React.useState('');
-  const [LastName, onChangeLastName] = React.useState('');
-  const [Company, onChangeCompany] = React.useState('');
-  const [Designation, onChangeDesignation] = React.useState('');
-  const [Email, onChangeEmail] = React.useState('');
-  const [number, onChangeNumber] = React.useState('');
-  const [Message, onChangeMessage] = React.useState('');
+  const isConnected = useNetworkStatus();
+
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [company, setCompany] = React.useState('');
+  const [designation, setDesignation] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [number, setNumber] = React.useState('');
+  const [message, setMessage] = React.useState('');
+
+  function bookService() {
+    if (firstName == '') {
+      SnackbarShow(PLEASE_ENTER_FIRST_NAME);
+      return;
+    }
+    if (lastName == '') {
+      SnackbarShow(PLEASE_ENTER_LAST_NAME);
+      return;
+    }
+    if (company == '') {
+      SnackbarShow(PLEASE_ENTER_COMPANY);
+      return;
+    }
+    if (designation == '') {
+      SnackbarShow(PLEASE_ENTER_DESIGNATION);
+      return;
+    }
+    if (email == '') {
+      SnackbarShow(PLEASE_ENTER_EMAIL);
+      return;
+    }
+    if (number == '') {
+      SnackbarShow(PLEASE_ENTER_PHONE);
+      return;
+    }
+    if (message == '') {
+      SnackbarShow(PLEASE_ENTER_MESSAGE);
+      return;
+    }
+  }
 
   return (
     <View style={styles.main}>
-
-   {/* Header */}
-
-      <View style={{height: 190,}}>
+      {/* Header */}
+      <View style={{flex: 0.4}}>
         <ImageBackground
           source={require('../../../assets/images/BookService.png')}
-          style={styles.serviceImg}>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-evenly',
-              alignItems: 'center',
-              marginTop: 15,
-            }}>
-            <TouchableOpacity onPress={() => navigation.goBack()} style={styles.BackBtn}>
-              <View style={styles.ProfileImg}>
-                <Image
-                  source={require('../../../assets/images/arrowBack.png')}
-                  style={styles.arrowBackBtn}
-                />
-              </View>
-            </TouchableOpacity>
-
-            <View>
-              <Text style={styles.headerBarTxt}>Book Service</Text>
-            </View>
-
-            <View style={{left: 20}}>
-              <Icon name="notifications" size={28} color={'#EC581F'} />
-            </View>
+          style={styles.headerImg}>
+          <CustomHeaderAdd
+            navigation={navigation}
+            title={'Book Service'}
+            icon={ICONS.notification_icon}
+            // redirect={ADD_TAXES}
+          />
+          <View style={{alignItems: 'center', marginTop: 65}}>
+            <Image source={ICONS.user_image} style={styles.profileImg} />
+            <Text style={styles.userNameTxt}>Jainil Bhatt</Text>
           </View>
         </ImageBackground>
-
-        <View style={{marginLeft:130,bottom:90}}>
-        <Image source={require("../../../assets/images/UserImage.png")} style={{height:80,width:80}}/>
-        <Text style={styles.profileTxt}>Jainil Bhatt</Text>
-      </View>
-      </View>
- 
-      {/* TextInput */}
-
-      <ScrollView style={{marginTop:15}} showsVerticalScrollIndicator={false}>
-
-      <View style={styles.viewTextInput}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeFirstName}
-          value={FirstName}
-          placeholder="First Name"
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
       </View>
 
-      <View style={styles.viewTextInput}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeLastName}
-          value={LastName}
-          placeholder="Last Name"
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
+      {/* Details */}
+
+      <View style={{flex: 0.7}}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <KeyboardAvoidingView
+            style={{
+              margin: 20,
+              flexDirection: 'column',
+              flex: 1,
+            }}>
+            {/* First Name */}
+            <View style={{marginTop: 10}}>
+              <TextInput
+                style={styles.txtInput}
+                onChangeText={setFirstName}
+                value={firstName}
+                placeholder="First Name"
+                placeholderTextColor={'gray'}
+              />
+            </View>
+            {/* last Name */}
+            <View style={{marginTop: 15}}>
+              <TextInput
+                style={styles.txtInput}
+                onChangeText={setLastName}
+                value={lastName}
+                placeholder="Last Name"
+                placeholderTextColor={'gray'}
+              />
+            </View>
+            {/* last Name */}
+            <View style={{marginTop: 15}}>
+              <TextInput
+                style={styles.txtInput}
+                onChangeText={setCompany}
+                value={company}
+                placeholder="Company"
+                placeholderTextColor={'gray'}
+              />
+            </View>
+            {/* last Name */}
+            <View style={{marginTop: 15}}>
+              <TextInput
+                style={styles.txtInput}
+                onChangeText={setDesignation}
+                value={designation}
+                placeholder="Designation"
+                placeholderTextColor={'gray'}
+              />
+            </View>
+            {/* last Name */}
+            <View style={{marginTop: 15}}>
+              <TextInput
+                style={styles.txtInput}
+                onChangeText={setEmail}
+                value={email}
+                placeholder="Email"
+                placeholderTextColor={'gray'}
+              />
+            </View>
+            {/* last Name */}
+            <View style={{marginTop: 15}}>
+              <TextInput
+                style={styles.txtInput}
+                onChangeText={setNumber}
+                value={number}
+                placeholder="Phone"
+                placeholderTextColor={'gray'}
+              />
+            </View>
+            {/* last Name */}
+            <View style={{marginTop: 15}}>
+              <TextInput
+                style={styles.txtAnnInput}
+                placeholder="Message"
+                multiline={true}
+                placeholderTextColor={'gray'}
+                keyboardType="default"
+                returnKeyLabel="Done"
+                returnKeyType="done"
+                onSubmitEditing={Keyboard.dismiss}
+                value={message}
+                onChangeText={v => setMessage(v)}
+                blurOnSubmit={true}
+              />
+            </View>
+
+            <View
+              style={{
+                marginTop: 20,
+              }}>
+              <TouchableOpacity
+                style={styles.updateBtn}
+                onPress={() => bookService()}>
+                <Text style={styles.updateTxt}>Book Service</Text>
+              </TouchableOpacity>
+            </View>
+          </KeyboardAvoidingView>
+        </ScrollView>
       </View>
-
-      <View style={styles.viewTextInput}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeCompany}
-          value={Company}
-          placeholder="Company"
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
-      </View>
-
-      <View style={styles.viewTextInput}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeDesignation}
-          value={Designation}
-          placeholder="Designation"
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
-      </View>
-
-      <View style={styles.viewTextInput}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeEmail}
-          value={Email}
-          placeholder="Email"
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
-      </View>
-
-      <View style={styles.viewTextInput}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeNumber}
-          value={number}
-          placeholder="Phone"
-          keyboardType='numeric'
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
-      </View>
-
-      <View style={styles.viewTextInput1}>
-        <TextInput
-          style={styles.txtInput}
-          onChangeText={onChangeMessage}
-          value={Message}
-          placeholder="Message"
-          placeholderTextColor={'#AEA8B2'}
-          cursorColor={"black"}
-        />
-      </View>
-
-       {/* BookServiceBtn */}
-  
-       <TouchableOpacity style={styles.ServiceBtn}>
-         <Text style={styles.ServiceBtnTxt}>Book Service</Text>
-       </TouchableOpacity>
-
-      </ScrollView>
+      <CustomDialogNetwork visible={!isConnected} />
     </View>
   );
 };

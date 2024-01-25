@@ -7,142 +7,130 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.primary,
   },
-  headerBarView: {
-    backgroundColor: 'white',
+  headerView: {
     flexDirection: 'row',
-    height: '12%',
     alignItems: 'center',
-  },
-  BackBtn : {
-    right: 15,
+    justifyContent: 'space-between',
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#fff',
+    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 15,
+    paddingEnd: 20,
   },
   arrowBackBtn: {
-    resizeMode: 'center',
-    
-    height: 35,
-    width: 35,
+    resizeMode: 'contain',
+    height: 17,
+    width: 23,
+  },
+  warrantyTxt: {
+    fontSize: 22,
+    color: '#EC581F',
+    fontWeight: '700',
+    fontFamily: 'Raleway-Regular',
+  },
+  warrantyCardView: {
+    // resizeMode: 'contain',
+    width: '100%',
+    height: 180,
+    padding: 10,
+    marginTop: 20,
+  },
+  maintenanceView: {
+    backgroundColor: '#fff',
+    padding: 2,
+    borderRadius: 10,
+    width: '55%',
+    // marginTop: 20,
+    marginLeft: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    // marginBottom: 45,
+  },
+  maintenanceTxt: {
+    fontSize: 14,
+    color: '#727270',
+  },
+  expiredTxt: {
+    fontSize: 14,
+    color: '#D9B600',
+  },
+  carImg: {
+    resizeMode: 'contain',
+    height: 120,
+    width: 110,
+    marginBottom: 45,
+    marginStart: 10,
+  },
+  parkingTxt: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '700',
+    fontFamily: 'Rajdhani-semiBold',
+  },
+  expiredView: {
+    backgroundColor: '#C00',
+    marginStart: 20,
+    marginEnd: 20,
+    padding: 5,
+    borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 20,
   },
-  headerBarTxt: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: COLORS.black,
-    fontFamily: 'Raleway-Bold',
+  amcTxt: {
+    color: '#fff',
+    fontSize: 14,
+    fontFamily: 'Raleway-Regular',
+    fontWeight: '600',
   },
-  WarrantyCardTxt: {
-    height: '15%',
-    width: '55%',
-    marginLeft: 20,
-    backgroundColor: COLORS.primary,
+  pdfView: {
+    backgroundColor: '#F7F7F7',
+    padding: 10,
+    margin: 15,
     borderRadius: 15,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    bottom:118
+    marginStart: 17,
   },
-  WarrantyTxt1: {
-    color: COLORS.bgColor,
-    fontSize: 14,
-    fontWeight: '700',
-    fontFamily: 'Rajdhani-Bold',
+  pdfImg: {
+    resizeMode: 'contain',
+    height: 30,
+    width: 30,
   },
-  WarrantyTxt2: {
-    color: COLORS.white1,
-    fontSize: 14,
-    fontWeight: '700',
-    fontFamily: 'Rajdhani-Bold',
+  pdfTxt: {
+    fontSize: 12,
+    color: '#EC581F',
+    fontWeight: '600',
   },
-  CarImg: {
-    height: '80%',
-    width: '42%',
-    bottom:34 
+  calendarImg: {
+    resizeMode: 'contain',
+    height: 19,
+    width: 20,
+    marginStart: 15,
   },
-  Text1 : {
-    fontSize:18,
-    fontWeight:"700",
-    color:COLORS.Text,
-    fontFamily:"Rajdhani-Bold"
+  calendarTxt: {
+    fontSize: 10,
+    color: '#727270',
+    fontFamily: 'Raleway-Regular',
+    fontWeight: '400',
   },
- 
-  Text3 : {
-    fontSize:24,
-    fontWeight:"600",
-    color:COLORS.Text,
-    fontFamily:"Rajdhani-SemiBold"
+  calendarView: {
+    backgroundColor: '#F7F7F7',
+    padding: 10,
+    flex: 1,
+    marginStart: 15,
+    marginEnd: 15,
+    borderRadius: 15,
+    flexDirection: 'column',
   },
- 
-  expiredCard : {
-    backgroundColor:COLORS.background1,
-    height:"5%",
-    width:"90%",left:18,
-    borderRadius:16,justifyContent:"center",
-  },
-  expiredTxt : {
-    color: COLORS.primary,
-    textAlign:"center",
-    fontSize:14,
-    fontWeight:"600",
-    fontFamily:"Raleway-SemiBold"
-  },
-  termBtn : {
-    height:50,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
-    borderRadius:10,flexDirection:"row",alignItems:"center",justifyContent:"space-between",padding:10
-  },
-  termTxt : {
-    color:COLORS.black,
-    fontWeight:"600",fontSize:10,right:15,
-    fontFamily: "Raleway-SemiBold"
-  },
-  termTxt1 : {
-    color:COLORS.black,
-    fontWeight:"600",fontSize:10,right:32,
-    fontFamily: "Raleway-SemiBold"
-  },
-  serviceBtn : {
-    height:65,width:152,backgroundColor:COLORS.cardView,marginTop:10,margin:5,marginLeft:15,
-    borderRadius:10,alignItems:"center",justifyContent:"center",
-  },
-  serviceDateImg : {
-    resizeMode:'center',left:10,height:19,width:21
-  },
-  serviceTxt : {
-    fontSize:10,
-    color:COLORS.bgColor,
-    fontWeight:"400",
-    fontFamily: "Raleway-Regular",right:10
-    
-  },
-  serviceImgTxt : {
-    fontSize:10,
-    color:COLORS.bgColor,
-    fontWeight:"400",
-    fontFamily: "Raleway-Regular",right:20
-    
-  },
-  serviceTxt1 : {
-    fontSize:16,
-    color:COLORS.black,
-    fontWeight:"400",
-    fontFamily: "Rajdhani-SemiBold",right:22
-  },
-  serviceTxt2 : {
-    fontSize:16,
-    color:COLORS.black,
-    fontWeight:"400",
-    fontFamily: "Rajdhani-SemiBold",right:8
-  },
-  WarrantyCardTxt1: {
-    color: COLORS.black,
-    fontSize: 14,
-    fontWeight: '700',
-    fontFamily: 'Rajdhani-Bold',
-  },
-  WarrantyCardTxt2: {
-    color: COLORS.green,
-    fontSize: 14,
-    fontWeight: '700',
-    fontFamily: 'Rajdhani-Bold',
+  dateTxt: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#EC581F',
+    fontFamily: 'Rajdhani-SemiBold',
+    marginTop: 5,
   },
 });
 

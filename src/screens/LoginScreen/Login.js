@@ -4,83 +4,126 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  KeyboardAvoidingView,
   ScrollView,
-  SafeAreaView
+  SafeAreaView,
+  StyleSheet,
 } from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '.';
+import {IMAGES} from '../../constants/images';
+import {ICONS} from '../../constants/icons';
+import {firebase} from '@react-native-firebase/auth';
+import {useNetworkStatus} from '../../utils/NetworkUtills';
+import {useDispatch, useSelector} from 'react-redux';
+import {login, logout, resetLogin} from '../../redux/slices/LoginSlice';
+import CustomDialogNetwork from '../../utils/CustomDialogNetwork';
+import {PLEASE_ENTER_PHONE} from '../../utils/SnackBarLabel';
+import {LoginAction} from '../../redux/action/LoginAction';
+import SnackbarShow from '../../utils/SnackbarShow';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import CustomProgress from '../../utils/CustomProgress';
+import {OTP, OTP_VERIFICATION, SIGNUP} from '../../constants/route-names';
 
 const Login = ({navigation}) => {
-  const [number, onChangeNumber] = React.useState('');
+  const isConnected = useNetworkStatus();
+  const dispatch = useDispatch();
 
+  const loginResponse = useSelector(state => state.Auth);
+
+  const [number, setNumber] = useState('');
+  const [confirm, setConfirm] = useState(null);
+
+  useEffect(() => {
+    if (loginResponse === undefined) return;
+    else callLoginResponse(loginResponse);
+  }, [loginResponse]);
+
+  async function callLoginResponse(loginResponse) {
+    if (loginResponse.data.data)
+      loginResponse.data.success ? signInWithPhoneNumber() : null;
+
+    loginResponse.data.success ? dispatch(resetLogin()) : null;
+  }
+
+  async function callLogin() {
+    if (number == '') {
+      SnackbarShow(PLEASE_ENTER_PHONE);
+      return;
+    }
+    await AsyncStorage.setItem('number', number);
+    const mobile_no = number;
+    const type = 1;
+    if (isConnected) {
+      dispatch(LoginAction({mobile_no, type}));
+    }
+  }
+
+  const signInWithPhoneNumber = async () => {
+    const number = await AsyncStorage.getItem('number');
+    try {
+      const confirmation = await firebase
+        .auth()
+        .signInWithPhoneNumber(`+91${number}`);
+      console.log(confirmation.verificationId); // Accessing a property, for example
+      console.warn('Navigating to Hello screen...'); // Accessing a property, for example
+      navigation.navigate(OTP, {confirmation, number});
+    } catch (error) {
+      console.error('Error sending OTP:', error);
+    }
+  };
   return (
-    <SafeAreaView style={styles.main}>
-         
-    {/* HeaderView */}
-
-     <View style={styles.ImageView}>
-        <Image source={require("../../../assets/images/Image.png")} style={styles.LoginImg}/>
-     </View>
-
-     {/* DetailView */}
-
-     <View style={styles.DetailView}>
-
-     <View style={styles.AppLogoView}>
-        <Image
-          source={require('../../../assets/images/IcubeLogo.png')}
-          style={styles.AppLogoImg}
-        />
-
-       <Image
-          source={require('../../../assets/images/parking.png')}
-          style={{height: 140, width: 140,top:50  }}
-        />
+    <View style={styles.container}>
+      <View style={{flex: 0.2}}>
+        <Image source={IMAGES.Image} style={styles.headerImg} />
       </View>
 
-    
-         {/* LoginTxt */}
+      {/* logo */}
+      <View style={{margin: 20, flex: 0.8, alignItems: 'center'}}>
+        <Image source={ICONS.icube_logo} style={styles.imageLogo} />
 
-      <View style={styles.LoginTxtView}>
-        <Text style={styles.LoginTxt1}>Log In</Text>
-        <Text style={styles.LoginTxt2}>
-        Use your i-cube Parking Elevators account to continue
-        </Text>
-      </View>
-     
-      <View style={styles.viewTextInput}>
+        <Image source={ICONS.parking} style={styles.carLogo} />
+
+        <View style={{alignItems: 'center', marginTop: 15}}>
+          <Text style={styles.loginTxt}>Log In</Text>
+          <Text style={styles.descriptionTxt}>
+            Use your i-cube Parking Elevators account to continue
+          </Text>
+        </View>
         <TextInput
           style={styles.txtInput}
-          onChangeText={onChangeNumber}
-          value={number}
-          placeholder="Mobile Number"
-          maxLength={10}
-          keyboardType="numeric"
+          placeholder={'Mobile Number'}
           placeholderTextColor={'#AEA8B2'}
+          value={number}
+          maxLength={10}
+          keyboardType="number-pad"
+          onChangeText={v => setNumber(v)}
         />
+
+        <TouchableOpacity style={styles.loginBtn} onPress={() => callLogin()}>
+          <Text style={styles.loginTxtBtn}>LOGIN</Text>
+          <Image source={ICONS.login_logo} style={styles.loginLogo} />
+        </TouchableOpacity>
+
+        <View style={styles.viewLoginBtn}>
+          <TouchableOpacity
+            onPress={() => {
+              setTimeout(() => {
+                navigation.navigate(SIGNUP);
+              }, 300);
+            }}>
+            <Text style={styles.signupTxt}>Don’t have an account? Sign Up</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-
-      <TouchableOpacity onPress={() => navigation.navigate('MainHome')} style={styles.LoginBtn}>
-       
-          <Text style={styles.LoginTxt}>LOGIN</Text>
-          <Image
-            source={require('../../../assets/images/LoginLogo.png')}
-            style={{height: 20, width: 20, left: 5}}
-          />
-      
-      </TouchableOpacity>
-      
-     </View>
-
-
-      <View style={styles.BottomView}>
-      <View style={{flexDirection:"row",justifyContent:"center"}}>
-      <Text style={styles.footerTxt1} onPress={()=> navigation.navigate("Sign")}>Don’t have an account?</Text>
-      <Text style={styles.footerTxt2} onPress={()=> navigation.navigate("Sign")}> Sign Up</Text>
-      </View>
-      </View>
-
-    </SafeAreaView>
+      <CustomDialogNetwork visible={!isConnected} />
+      {loginResponse.loading ? (
+        <View style={styles.loading}>
+          <CustomProgress />
+        </View>
+      ) : null}
+      <CustomDialogNetwork visible={!isConnected} />
+    </View>
   );
 };
 

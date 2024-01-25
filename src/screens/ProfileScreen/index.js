@@ -1,20 +1,23 @@
-import React from "react";
-import {StyleSheet } from "react-native"
-import COLORS from "../../../assets/colors/colors";
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import COLORS from '../../../assets/colors/colors';
 
-const styles = StyleSheet.create ({
-   main : {
-    flex:1,
-    backgroundColor:COLORS.primary
-   },
-   serviceImg : {
-    height:"96%",width:"100%"
-},
-BackBtn : {
-  right: 35,
-},
-arrowBackBtn: {
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    backgroundColor: COLORS.primary,
+  },
+  headerImg: {
+    resizeMode: 'cover',
+    height: 200,
+    width: '100%',
+  },
+  backBtn: {
+    right: 28,
+  },
+  arrowBackBtn: {
     resizeMode: 'center',
+
     height: 35,
     width: 35,
     alignItems: 'center',
@@ -23,42 +26,91 @@ arrowBackBtn: {
   headerBarTxt: {
     fontSize: 22,
     fontWeight: '700',
-    color: COLORS.black,
+    color: COLORS.text,
     fontFamily: 'Raleway-Bold',
+    right: 8,
   },
-  profileTxt : {
-     fontSize:24,
-     fontWeight:"600",
-     right:13,
-     color:COLORS.bgColor,
-     fontFamily:"Lato-SemiBold"
+  profileImg: {
+    resizeMode: 'contain',
+    height: 80,
+    width: 80,
+    overflow: 'hidden',
+    borderRadius: 50,
   },
-  ProfileView : {
-     height:450,width:330,backgroundColor:"white",margin:15,
-     borderColor:"#EFEFEF",borderWidth:1,borderRadius:5
+  userNameTxt: {
+    fontSize: 24,
+    color: '#727270',
+    fontWeight: '600',
+    fontFamily: 'Raleway-Light',
   },
-  ProfileInfo : {
-    height:40,width:328,backgroundColor:COLORS.black,borderRadius:5,
-    flexDirection:"row",alignItems:"center",justifyContent:"space-between",
+  detailView: {
+    flexDirection: 'column',
+    backgroundColor: COLORS.primary,
+    borderRadius: 5,
+    padding: 15,
+
+    borderColor: '#EFEFEF',
+    marginStart: 10,
+    overflow: 'hidden',
+    marginEnd: 10,
+    shadowColor: '#9D9D9D',
+    borderWidth: 1,
+    shadowOpacity: 0.25,
+    shadowRadius: 2,
+    elevation: 2,
+    // margin: 5,
   },
-  profileInfoTxt : {
-    fontSize:16,
-    fontWeight:"600",
-    color:COLORS.Text,
-    fontFamily:"Raleway-SemiBold",left:10
+  profileInfo: {
+    height: 40,
+    backgroundColor: '#EC581F',
+    marginStart: 10,
+    marginEnd: 10,
+    // margin: 10,
+    // padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderRadius: 5,
   },
-  DetailTxt : {
-    color:"#A0A0A0",
-    fontSize:15,
-    fontWeight:"300",
-    fontFamily:"Lato-Light"
+  profileTxt: {
+    color: COLORS.primary,
+    fontSize: 16,
+    fontWeight: '600',
+    fontFamily: 'Raleway-Light',
+    padding: 10,
   },
-  DetailTxt1 : {
-   fontSize:16,
-   fontWeight:"400",
-   color:COLORS.text1,
-   fontFamily:"Lato-Regular"
-  }
-})
+  editBtn: {
+    resizeMode: 'contain',
+    height: 45,
+    width: 45,
+  },
+  detailTxt: {
+    color: '#A0A0A0',
+    fontSize: 15,
+    fontWeight: '300',
+    fontFamily: 'Raleway-Light',
+  },
+  detailTxt1: {
+    color: '#000',
+    fontSize: 15,
+    fontWeight: '300',
+    fontFamily: 'Raleway-Regular',
+  },
+  detailNumberTxt: {
+    color: '#000',
+    fontSize: 15,
+    fontWeight: '300',
+    fontFamily: 'Lato-Regular',
+  },
+  loading: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default styles;

@@ -3,67 +3,73 @@ import {StyleSheet} from 'react-native';
 import COLORS from '../../../assets/colors/colors';
 
 const styles = StyleSheet.create({
-  headerBarView: {
+  mainView: {
+    flex: 1,
     backgroundColor: 'white',
+  },
+  headerView: {
     flexDirection: 'row',
-    height: '12%',
     alignItems: 'center',
+    // height: 60,
+    padding: 10,
+    justifyContent: 'space-between',
+    // backgroundColor: 'black',
   },
-  ProfileImg: {
-    right: 20,
-    height: 35,
-    width: 35,
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderColor:"orange",borderWidth:1
+  userImg: {
+    // resizeMode: 'contain',
+    height: 32,
+    width: 32,
   },
-  logoImage: {
-    resizeMode: 'contain',
+  logoImg: {
+    // resizeMode: 'contain',
     height: 30,
+    width: 110,
   },
-  productView : {
-    backgroundColor:COLORS.black,
-    height:65,width:"89%",
-    margin:20,borderRadius:18,marginTop:80,
-    flexDirection:"row",alignItems:"center"
+  productImg: {
+    resizeMode: 'contain',
+    height: 140,
   },
-  productImg : {
-    resizeMode:"cover",
-    height:137,width:163,bottom:45,
+  productTxt: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: '700',
+    fontFamily: 'Raleway-Regular',
+    marginStart: 130,
+    marginTop: 35,
   },
-  productImgTxt : {
-    color:COLORS.primary,
-    fontSize:22,
-    fontWeight:"700",
-    fontFamily:"Raleway-Bold"
-  }, 
-  cardMainView : {
-    backgroundColor:COLORS.cardView,
-    height:135,
-    width:"45%",
-    borderRadius:18,
-   
-   alignItems:"center",justifyContent:"center"
+  productView: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderRadius: 12,
+    fontSize: 14,
+    fontWeight: '600',
+    fontFamily: 'Lato-Semibold',
+    paddingHorizontal: 10,
+    backgroundColor: '#F7F7F7',
+    shadowColor: 'black',
+    shadowOpacity: 0.37,
+    shadowRadius: 10,
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    elevation: 5,
   },
-  cardView : {
-    backgroundColor:COLORS.primary,
-    height:"40%",
-    width:"40%",
-    borderRadius:50,
-    alignItems:"center",justifyContent:"center",margin:5
+  warrantyImg: {
+    resizeMode: 'contain',
+    height: 50,
+    width: 50,
   },
-  cardViewImg : {
-    resizeMode:"center",
-    height:60,width:60
+  warrantyTxt: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: '700',
+    fontFamily: 'Raleway-Regular',
+    marginTop: 10,
+    textAlign: 'center',
+    marginBottom: 10,
   },
-  cardTxt : {
-    color:COLORS.text1,
-    fontSize:16,
-    fontWeight:"600",
-    fontFamily:"Raleway-SemiBold"
-  }
-
 });
 
 export default styles;

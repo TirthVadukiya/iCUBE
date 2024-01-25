@@ -1,97 +1,98 @@
 import React from 'react';
-import {StyleSheet,Dimensions} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import COLORS from '../../../assets/colors/colors';
 
 const styles = StyleSheet.create({
-  main: {
+  container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
   },
-  ImageView: {
-    flex:0.17,
+  headerImg: {
+    // resizeMode: 'contain',
+    height: 125,
+    width: '100%',
   },
-  LoginImg : {
-    height: 110,
-    width:  "100%",
-   
+  imageLogo: {
+    height: 61,
+    width: 230,
   },
-  DetailView : {
-    flex:0.80,
+  carLogo: {
+    height: 150,
+    width: 150,
+    marginTop: 20,
   },
-  AppLogoView: {
-    alignItems: 'center',
-    // flexDirection: 'column',
-    margin:10
-  },
-  AppLogoImg: {
-    
-    height: 54,
-    width: 200,
-  },
-  LoginTxtView: {
-    flexDirection: 'column',
-    alignItems: 'center',top:80,
-  },
-  LoginTxt1: {
-    color: '#EC581F',
+  loginTxt: {
     fontSize: 25,
-    fontWeight: '700',
+    color: COLORS.text,
     fontFamily: 'Raleway-Regular',
+    fontWeight: '700',
   },
-  LoginTxt2: {
-    color: '#727270',
+  descriptionTxt: {
+    fontWeight: '400',
     fontSize: 14,
     fontFamily: 'Raleway-Regular',
-  },
-  viewTextInput: {
-    backgroundColor: '#FFF',
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#D6D6D6',
-    marginHorizontal: 25,height:45,
-    margin: 10,marginTop:100
+    color: COLORS.text3,
   },
   txtInput: {
     width: '100%',
-    padding: 10,
-    color: 'black',
+    height: 50,
+    borderColor: '#D6D6D6',
+    borderWidth: 1,
+    borderRadius: 8,
     fontSize: 14,
-    fontWeight: "400",
-    fontFamily: "Raleway-Regular"
+    fontWeight: '600',
+    fontFamily: 'Lato-Semibold',
+    paddingHorizontal: 10,
+    marginTop: 20,
+    color: COLORS.text1,
   },
-  LoginBtn: {
-    backgroundColor: '#EC581F',
+  loginBtn: {
+    width: '100%',
     height: 45,
-    flexDirection: 'row',
+    backgroundColor: '#EC581F',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 10,
-    marginHorizontal: 25,marginTop:15
-  },
-  LoginTxt: {
+    borderRadius: 8,
     fontSize: 14,
-    color: '#FFF',
+    marginTop: 20,
+    flexDirection: 'row',
+    padding: 10,
+  },
+  loginTxtBtn: {
+    color: '#fff',
+    fontSize: 14,
     fontWeight: '700',
-    fontFamily: 'Raleway-Bold',
+    fontFamily: 'Raleway-Regular',
   },
-  footerTxt1: {
+  loginLogo: {
+    height: 18,
+    width: 18,
+    marginLeft: 10,
+  },
+  viewLoginBtn: {
+    width: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+    // padding: 20,
+  },
+  signupTxt: {
+    color: '#EC581F',
     fontSize: 14,
+    fontFamily: 'Raleway-Regular',
     fontWeight: '400',
-    color: COLORS.black,
-    fontFamily: 'Raleway-Regular',
   },
-  footerTxt2: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: COLORS.black,
-    fontFamily: 'Raleway-Regular',
-   
+  loading: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  BottomView : {
-
-  }
 });
 
 export default styles;
