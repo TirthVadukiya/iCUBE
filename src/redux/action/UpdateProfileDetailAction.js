@@ -6,7 +6,7 @@ export const UpdateProfileDetailAction = createAsyncThunk(
   async data => {
     try {
       const response = await axios.post('api/update', data);
-      // console.warn('====>', response.data);
+      console.log('====>', response.data);
       return response.data;
     } catch (error) {
       console.log('UpdateProfileDetail', error);

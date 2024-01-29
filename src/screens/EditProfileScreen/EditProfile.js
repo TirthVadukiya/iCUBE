@@ -78,21 +78,19 @@ const EditProfile = ({navigation, route}) => {
 
   function callUpdateProfileDetail(getUpdateProfileDetails) {
     if (getUpdateProfileDetails?.data?.status) {
-      SnackbarShow(getUpdateProfileDetails.data.success_message);
+      SnackbarShow(getUpdateProfileDetails.data.message);
       navigation.goBack();
     }
-
-    if (getUpdateProfileDetails?.data.error_message) {
+    if (getUpdateProfileDetails?.data?.message) {
       dispatch(resetUpdateProfileDetail());
-      getUpdateProfileDetails.data.error_message
-        ? SnackbarShow(getUpdateProfileDetails.data.error_message)
+      getUpdateProfileDetails.data.message
+        ? SnackbarShow(getUpdateProfileDetails.data.message)
         : null;
     }
   }
 
   function loadStaffData() {
     if (user) {
-      console.warn(user.image);
       setPhoto(user.image);
       setFirstName(user.name);
       setMobile(user.mobile_no);
@@ -101,8 +99,8 @@ const EditProfile = ({navigation, route}) => {
       setZipCode(user.pincode);
       setAddress(user.address);
       setOccupation(user.occupation);
-      setOwnCar1(user.cars);
-      setOwnCar2(user.cars);
+      // setOwnCar1(user.cars);
+      // setOwnCar2(user.cars);
     }
   }
 
@@ -245,7 +243,7 @@ const EditProfile = ({navigation, route}) => {
 
   function callSaveProfileDetails() {
     let dataSend = new FormData();
-    if (photo) {
+    if (type && fileName) {
       dataSend.append('image', {
         uri: Platform.OS === 'android' ? photo : photo.replace('file://', ''),
         type: type,
@@ -259,7 +257,7 @@ const EditProfile = ({navigation, route}) => {
     dataSend.append('pincode', zipCode);
     dataSend.append('address', address);
     dataSend.append('occupation', occupation);
-    dataSend.append('cars', ownCar1);
+    dataSend.append('cars', 'alto');
 
     dispatch(UpdateProfileDetailAction(dataSend));
   }
